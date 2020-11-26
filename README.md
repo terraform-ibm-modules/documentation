@@ -22,5 +22,24 @@ This repo captures the guidelines to contribute to either existing repo or creat
 
 * `Module outputs` - Use to return results to the calling module, which it can then use to populate arguments elsewhere. Outputs should have descriptions. For more information, read the [guidelines here](output_values.md). 
 
+* `Naming Modules` When we regiter our module repo ( naming convention `terraform-<PROVIDER>-<NAME>` ) with terraform registry, it picks up the `NAME` from above naming convention and consider it as name of the root module. All the sub-modules will be prefixed with this root module followed by underscore. Hence do not repeat the root module name in sub-module creation.
+
+E.g: Say we created a module repo called `terraform-ibm-cos` and we have 2 sub-modules named `cos-instance` and `cos_bucket`. Now, when we register our module with terraform registry, it generates module blocks as follows
+
+```
+module "cos_cos-instance" {
+  source  = "terraform-ibm-modules/cos/ibm//modules/cos-instance"
+  version = "1.0.0"
+} 
+```
+
+And if we want to name a sub-module with multiple strings, use symbol `-` as delimiter. e.g: activity-tracker.
+
+* `Source Path` Both in main.tf and README.md files, point the source to respective module terraform registry path.
+
+    E.g:  
+
+    source  = "terraform-ibm-modules/logdna/ibm//modules/instance"
+
 
     
