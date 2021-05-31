@@ -24,16 +24,16 @@ This repo captures the guidelines to contribute to either existing repo or creat
 
 * `Naming Modules` When we regiter our module repo ( naming convention `terraform-<PROVIDER>-<NAME>` ) with terraform registry, it picks up the `NAME` from above naming convention and consider it as name of the root module. All the sub-modules will be prefixed with this root module followed by underscore. Hence do not repeat the root module name in sub-module creation.
 
-E.g: Say we created a module repo called `terraform-ibm-cos` and we have 2 sub-modules named `cos-instance` and `cos_bucket`. Now, when we register our module with terraform registry, it generates module blocks as follows
+    E.g: Say we created a module repo called `terraform-ibm-cos` and we have 2 sub-modules named `cos-instance` and `cos_bucket`. Now, when we register our module with terraform registry, it generates module blocks as follows
 
-```
-module "cos_cos-instance" {
-  source  = "terraform-ibm-modules/cos/ibm//modules/cos-instance"
-  version = "1.0.0"
-} 
-```
+    ```
+    module "cos_cos-instance" {
+        source  = "terraform-ibm-modules/cos/ibm//modules/cos-instance"
+        version = "1.0.0"
+    } 
+    ```
 
-And if we want to name a sub-module with multiple strings, use symbol `-` as delimiter. e.g: activity-tracker.
+    And if we want to name a sub-module with multiple strings, use symbol `-` as delimiter. e.g: activity-tracker.
 
 * `Source Path` Both in main.tf and README.md files, point the source to respective module terraform registry path.
 
@@ -41,5 +41,11 @@ And if we want to name a sub-module with multiple strings, use symbol `-` as del
 
     source  = "terraform-ibm-modules/logdna/ibm//modules/instance"
 
+* `Github actions` - GitHub Actions makes it easy to automate all the software workflows. As part of github actions we add pre-commit hooks which are being used to validate the PR before it gets merged onto main branch. It also being used to run the test cases perodically to assure the quality of both templates and the modules.
 
-    
+* `test directory` - Use terratest to write the test cases under `test` directory, which will be executed by the github actions using a scheduler on a periodic basis. Following link can be used as a reference to write a test file (https://github.com/terraform-ibm-modules/terraform-ibm-iam/blob/main/test/access-group/access_group_test.go)
+
+* `.gitignore` -  Use this file to specify intentionally the untracked files that Git should ignore.
+
+* `.pre-commit-config.yaml` - Used for identifying simple issues before submission to code review. We run our hooks on every commit to automatically point out issues in code such as missing semicolons, trailing whitespace, and debug statements. 
+     
