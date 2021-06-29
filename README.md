@@ -43,7 +43,7 @@ This repo captures the guidelines to contribute to either existing repo or creat
 
 * `Github actions` - GitHub Actions makes it easy to automate all the software workflows. As part of github actions we add pre-commit hooks which are being used to validate the PR before it gets merged onto main branch. It also being used to run the test cases perodically to assure the quality of both templates and the modules.
 
-* `test directory` - Use terratest to write the test cases under `test` directory, which will be executed by the github actions using a scheduler on a periodic basis. Following link can be used as a reference to write a test file (https://github.com/terraform-ibm-modules/terraform-ibm-iam/blob/main/test/access-group/access_group_test.go)
+* `test directory` - Use terratest to write the test cases under `test` directory, which will be executed by the github actions using a scheduler on a periodic basis. Following link can be used as a reference to write a [test file](https://github.com/terraform-ibm-modules/terraform-ibm-iam/blob/main/test/access-group/access_group_test.go). To execute terratest files locally, refer the [document here](terratest.md)
 
 * `.gitignore` -  Use this file to specify intentionally the untracked files that Git should ignore.
 
