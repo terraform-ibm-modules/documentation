@@ -1,4 +1,4 @@
-Execute the following command to run the testcase on your local machine
+Execute the following command to run the terratest cases on your local machine
 
 ``` bash
 cd test
