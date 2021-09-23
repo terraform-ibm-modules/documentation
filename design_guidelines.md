@@ -29,7 +29,7 @@ Based on certain characterstics, IBM Cloud Terraform modules are categorized int
 * SHOULD have root module and sub-modules for the IBM Cloud Service abstraction
 * MUST expose all the input variables that are required to configure the IBM Cloud Services abstraction (and the dependent services).
 * MUST return all the results using output variables that can be consumed by other modules.
-* MUST design child module that are Observable, Scalable, Available and Secure - by default
+* MUST design child module that are Observable, Scalable, Available and Secure(Network security, User security & Data security) - by default
 * SHOULD design child modules that can automate the tasks performed using the IBM Cloud Console UI. 
 
 
