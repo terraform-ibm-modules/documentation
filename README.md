@@ -11,5 +11,13 @@ This repo captures several guidelines to contribute to either existing repo or c
  * [Contribution Guidelines](contribution_guidelines.md)     :  contributing to existing module
  * [Issue report Guidelines](issue_report_guidelines.md)     :  report an issue or request a feature
 
+ ### What to capture at root module README file
  
+ First and Foremost important step to follow before proceeding with module implementation is defining your README file with following points :
+ 
+ * What is the scope of the module
+ * Diagram capturing multiple sub-modules involved and their functionalities
+ * What are the inputs module expects & the outputs we get back
+ * List of variables it requires
+ * Example showing how to consume the module
      
