@@ -1,10 +1,9 @@
-# IBM Cloud Terraform modules - Guidelines
+# IBM Cloud Terraform modules - Documentation
 
-This repository captures several guidelines to contribute to either existing modules or creating new modules under [terraform-ibm-modules](https://github.com/terraform-ibm-modules) organization. 
+`terraform-ibm-modules` is the home of a growing number of curated IBM Cloud terraform modules. The goal of this organization is both to create a community of developers, and to share common IBM Cloud infrastructure as code (IaC) and automation assets.
 
-## Guidelines
 
- We aspire to create a welcoming environment for collaboration with IBM Cloud Terraform modules. To do that we have defined following set of guidelines
+# Documentation
 
  * [Module Implementation Guidelines](implementation_guidelines.md) :  common implementation guidelines
  * [Module Design Guidelines](design_guidelines.md)          :  based on certain characteristics we can design the module
