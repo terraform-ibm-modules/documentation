@@ -10,5 +10,8 @@
  * Contributing : :+1::tada: Thank you for taking the time to contribute! :tada::+1:
    * [Setup your development environment](local-dev-setup.md)
    * [Regular developer tasks](dev-maintenance.md)
- * [Issue report Guidelines](issue_report_guidelines.md)     :  report an issue or request a feature
+   * [Creating a module](https://github.com/terraform-ibm-modules/terraform-ibm-module-template)
+   * **Notice**: By submitting a patch, you agree to allow the project owner to
+license your work under the same license as that used by the project.
+ * [Report a Bug or Create Enhancement Request](issues.md)  :  report an issue or request a feature
      
