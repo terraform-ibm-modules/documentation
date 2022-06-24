@@ -58,7 +58,7 @@ A few recommendations, and good practices:
 
 # Module validation tests
 
-Modules must contains at the minumum one automated validation test that apply, destroy and test idempotency of the module. See [Validation tests](test.md) for details.
+Modules must contains at the minumum one automated validation test that apply, destroy and test idempotency of the module. See [Validation tests](tests.md) for details.
 
 # Module versioning
 
