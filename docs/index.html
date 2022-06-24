@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+<!-- Theme: Simple Dark -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css">
+  <link rel="stylesheet" href="themeable.css">
+</head>
+
+<body>
+  <div id="app"></div>
+  <script src="//cdn.jsdelivr.net/npm/docsify-edit-on-github"></script>
+  <script src="//unpkg.com/docsify-edit-on-github/index.js"></script>
+  <script>
+    window.$docsify = {
+      name: 'IBM Cloud Terraform modules',
+      repo: '',
+      loadSidebar: true,
+      subMaxLevel: 3,
+      homepage: 'README.md',
+      lastModified: {
+        repo: '/terraform-ibm-modules/documentation',
+        dateFormat: '{YYYY}-{MM}-{DD}',
+        preString: 'Last updated: ',
+        align: 'left'
+      },
+      themeable: {
+        responsiveTables: true // default
+      },
+      plugins: [
+        EditOnGithubPlugin.create(
+          'https://github.com/terraform-ibm-modules/documentation/blob/main/docs/', undefined, 'Edit in GitHub'
+        )
+      ],
+      search: {
+        maxAge: 86400000,  // Expiration time, the default one day
+        paths: [
+        ],
+        placeholder: 'Search...',
+        noData: 'No results',
+        depth: 2, // Headline depth, 1 - 6
+        hideOtherSidebarContent: false // whether to hide other sidebar content
+      }
+    }
+  </script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/tinydate@1/dist/tinydate.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/rxmapple/docsify-last-modified@main/src/docsify-last-modified.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-hcl.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-markdown.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+</body>
+
+</html>

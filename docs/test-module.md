@@ -1,4 +1,4 @@
-# Validation tests
+# Testing your module :id=dev-test
 
 Tests are written in the Go programming language to take advantage of an open source Go library called [Terratest](https://github.com/gruntwork-io/terratest).
 The tests also use test helper functions from [ibmcloud-terratest-wrapper](https://github.com/terraform-ibm-modules/ibmcloud-terratest-wrapper).
@@ -91,3 +91,4 @@ Tests can take a long time to run, for example when they provision and then dest
 For example, if a test spins up a Kubernetes cluster and then deploys things to it, you can use `ImplicitDestroy` to remove all the resources that are deployed. The resources are destroyed along with the cluster deletion.
 
 :exclamation: Never pass any resources to `ImplicitDestroy` that are created as part of the module that you are testing. The tests are designed to follow the same flow as a user who runs `terraform destroy`. Use this feature only on supporting resources of the module that are used in the end-to-end test.
+

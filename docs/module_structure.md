@@ -1,4 +1,4 @@
-# Module Structure - Guidelines
+# Module structure
 
 A module is a container for multiple resources that are used together. The `.tf` files in your working directory when you run `terraform plan` or `terraform apply` together form the root module. That module may call other modules and connect them together by passing output values from one to input values of another.
 
@@ -8,7 +8,7 @@ The following [template](https://github.com/terraform-ibm-modules/terraform-ibm-
 
 A complete example of a module following the standard structure is shown below.
 
-```
+```text
 ├── .github/
 │   ├── workflows/
 │   │   ├── workflow_file1.yml
@@ -41,6 +41,4 @@ A complete example of a module following the standard structure is shown below.
 ├── test/
 │   ├── test_file1.go/
 │   ├── .../
-
 ```
-

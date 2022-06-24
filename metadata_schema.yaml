@@ -1,558 +1,556 @@
 # Description : Metadata used to describe a Terraform Module and its contents.
-# Refer to the response payload here - https://www.terraform.io/docs/registry/api.html
+# Refer to the response payload here - https://www.terraform.io/docs/registry/api.html
 # Registry API, example for observability module: https://registry.terraform.io/v1/modules/terraform-ibm-modules/observability/ibm
 
-  id: 
-      required : true
-      type : string
-      description : Id of the terraform module (from Hashicorp registry)
+  id:
+      required : true
+      type : string
+      description : Id of the terraform module (from Hashicorp registry)
       example: "terraform-ibm-modules/observability/ibm/1.4.0"
   owner:
-      required : true
-      type : string
-      description : Owner of the terraform module
+      required : true
+      type : string
+      description : Owner of the terraform module
       example: "ibmtfprovider"
   namespace:
-      required : false
-      type : string
-      description : Namespace of the module in Hashicorp registry
+      required : false
+      type : string
+      description : Namespace of the module in Hashicorp registry
       example: "terraform-ibm-modules"
-  name:
-      required : true
-      type : string
-      description : Name of the module
+  name:
+      required : true
+      type : string
+      description : Name of the module
       example: "observability"
-  version:
-      required : true
-      type : string
-      description : Version of the module
+  version:
+      required : true
+      type : string
+      description : Version of the module
       example: "1.4.0"
-  providers:
-      required : true
-      type : list(string)
-      description : List of providers used in the module
+  providers:
+      required : true
+      type : list(string)
+      description : List of providers used in the module
       example: ["ibm"]
   provider_logo_url:
       required : true
-      type : string
-      description : Path of the image to be displayed
+      type : string
+      description : Path of the image to be displayed
       example: "/images/providers/generic.svg?2"
-  description : 
-      required : false
-      type : string
-      description : Description about the module
+  description :
+      required : false
+      type : string
+      description : Description about the module
       example: "Terraform module to create services on IBM Cloud "
-  source:
-      required : true
-      type : string
-      description : Repository location of the terraform module
+  source:
+      required : true
+      type : string
+      description : Repository location of the terraform module
       example: "https://github.com/terra…raform-ibm-observability"
   tags:
-      required : true
-      type : list(string)
-      description : Used to filter out the required modules
+      required : true
+      type : list(string)
+      description : Used to filter out the required modules
       example: ["v1.4.0","logging","monitoring","cluster"]
-  published_at:
-      required : true
-      type : string
-      description : Time of publishing the terraform module
-  registry:
-      required : true
-      type : string
-      description : terraform registry link
+  published_at:
+      required : true
+      type : string
+      description : Time of publishing the terraform module
+  registry:
+      required : true
+      type : string
+      description : terraform registry link
       example: "2021-11-18T10:34:28.911362Z"
-  alias:
-      required : true
-      type : string
-      description : Alias to module
+  alias:
+      required : true
+      type : string
+      description : Alias to module
       example: "ob"
 providers:
     required : true
-    type : list(string)
-    description : "List of overall (root + submodule) dependent providers"
+    type : list(string)
+    description : "List of overall (root + submodule) dependent providers"
     example: "ibm"
 root:
   path:
     required : true
-    type : string
-    description : "Module path"
+    type : string
+    description : "Module path"
   name:
     required : true
-    type : string
-    description : "Name of the module"
+    type : string
+    description : "Name of the module"
     example: "observability"
   inputs:
     - name:
-        required : true
-        type : string
-        description : "Variable name"
-    - type: 
-        required: true
-        type: string
-        description: "Variable data type, such as string, list(string), integer, etc."
-    - is_required: 
-        required: true
-        type: bool
-        description: "Is the input variable mandatory or not ?"
-    - default_value:
-        required: false
-        type: string
-        description: "Default value of variable, if it exists"
-    - description: 
-        required: false
-        type: string
-        description: "Short description of the input variable"
-    - example:
-        required: false
-        type: string 
-        description: "Example of the input variable"
-    - is_sensitive:
-        required: false
-        type: bool 
-        description: "Does the input variable hold secret, sensitive, credential values or not ?"
-    - related_to:
-        required: true
-        type: list(string)
-        description: "Input variable is related to a list of dependent resources, dependent datasource or dependent module"
-    - min_value:
-        required: false
-        type: integer
-        description: "Minimum value of the input variable"
-    - max_value:
-        required: false
-        type: integer
-        description: "Maximum value of the input variable"
-    - allowed_values:
-        required: false
-        type: list(any) 
-        description: "List of allowed values for the input variable"
-    - min_length:
-        required: false
-        type: integer
-        description: "Minimum length of the string, for the string input variable"
-    - max_length:
-        required: false
-        type: integer
-        description: "Maximum length of the string, for the string input variable"
-    - is_nullable:
-        required: false
-        type: bool
-        description: "Can the variable value be null ?"
-    - is_force_new:
-        required: false
-        type: bool
-        description: "Indicates that altering the input variable value will result in creation of new resource instance"
-    - cloud_data_type: 
-        required: false
-        type: string
-        description: "Type of Cloud data stored in the input variable, such as, resource-group-id, vpc-id, cluster-id, region, etc."
-    - cloud_data_range:
-        required: false
-        type: string
-        description: "Range or scope for the cloud_data_type; for example `cloud_data_type=vpc_id` in `region=us-south`"
-    - regex:
-        required: false
-        type: string
-        description: "Regular experssion used to validate the input variable"
-    - is_provision_controller:
-        required: true
-        type: bool
-        description: "Is the input variable used to control the provisioning of resource ?"
-    - is_count_controller:
-        required: true
-        type: bool
-        description: "Is the input variable used to control the number of instances to be provisioned ?"
+        required : true
+        type : string
+        description : "Variable name"
+    - type:
+        required: true
+        type: string
+        description: "Variable data type, such as string, list(string), integer, etc."
+    - is_required:
+        required: true
+        type: bool
+        description: "Is the input variable mandatory or not ?"
+    - default_value:
+        required: false
+        type: string
+        description: "Default value of variable, if it exists"
+    - description:
+        required: false
+        type: string
+        description: "Short description of the input variable"
+    - example:
+        required: false
+        type: string
+        description: "Example of the input variable"
+    - is_sensitive:
+        required: false
+        type: bool
+        description: "Does the input variable hold secret, sensitive, credential values or not ?"
+    - related_to:
+        required: true
+        type: list(string)
+        description: "Input variable is related to a list of dependent resources, dependent datasource or dependent module"
+    - min_value:
+        required: false
+        type: integer
+        description: "Minimum value of the input variable"
+    - max_value:
+        required: false
+        type: integer
+        description: "Maximum value of the input variable"
+    - allowed_values:
+        required: false
+        type: list(any)
+        description: "List of allowed values for the input variable"
+    - min_length:
+        required: false
+        type: integer
+        description: "Minimum length of the string, for the string input variable"
+    - max_length:
+        required: false
+        type: integer
+        description: "Maximum length of the string, for the string input variable"
+    - is_nullable:
+        required: false
+        type: bool
+        description: "Can the variable value be null ?"
+    - is_force_new:
+        required: false
+        type: bool
+        description: "Indicates that altering the input variable value will result in creation of new resource instance"
+    - cloud_data_type:
+        required: false
+        type: string
+        description: "Type of Cloud data stored in the input variable, such as, resource-group-id, vpc-id, cluster-id, region, etc."
+    - cloud_data_range:
+        required: false
+        type: string
+        description: "Range or scope for the cloud_data_type; for example `cloud_data_type=vpc_id` in `region=us-south`"
+    - regex:
+        required: false
+        type: string
+        description: "Regular experssion used to validate the input variable"
+    - is_provision_controller:
+        required: true
+        type: bool
+        description: "Is the input variable used to control the provisioning of resource ?"
+    - is_count_controller:
+        required: true
+        type: bool
+        description: "Is the input variable used to control the number of instances to be provisioned ?"
   outputs:
-    - name:
-        required: true
-        type: string
-        description: "Name of the output variable"
-    - type: 
-        required: true
-        type: string 
-        description: "Type of the output variable"
-    - description: 
-        required: false
-        type: string
-        description: "Short description about output variable"
-    - example:
-        required: false
-        type: string 
-        description: "Example of the output variable"
-    - is_sensitive:
-        required: false
-        type: bool
-        description: "Does the output variable hold secret, sensitive, credential values or not ?"
-    - cloud_data_type: 
-        required: false
-        type: string
-        description: "Type of Cloud data stored in the output variable, such as, resource-group-id, vpc-id, cluster-id, region, etc."
-    - related_to:
-        required: true
-        type: list(string)
-        description: "Output variable is produced by a list of dependent resources, dependent datasource or dependent module"
-    - derived_from:
-        required: false
-        type: list(string)
-        description: "Derived from input variables or local variables"
+    - name:
+        required: true
+        type: string
+        description: "Name of the output variable"
+    - type:
+        required: true
+        type: string
+        description: "Type of the output variable"
+    - description:
+        required: false
+        type: string
+        description: "Short description about output variable"
+    - example:
+        required: false
+        type: string
+        description: "Example of the output variable"
+    - is_sensitive:
+        required: false
+        type: bool
+        description: "Does the output variable hold secret, sensitive, credential values or not ?"
+    - cloud_data_type:
+        required: false
+        type: string
+        description: "Type of Cloud data stored in the output variable, such as, resource-group-id, vpc-id, cluster-id, region, etc."
+    - related_to:
+        required: true
+        type: list(string)
+        description: "Output variable is produced by a list of dependent resources, dependent datasource or dependent module"
+    - derived_from:
+        required: false
+        type: list(string)
+        description: "Derived from input variables or local variables"
   locals:
-    - name:
-        required: true
-        type: string
-        description: "Name of the local variable"
-    - type: 
-        required: true
-        type: string
-        description: "Type of the local variable"
-    - example:
-        required: false
-        type: string
-        description: "Example of the local variable"
-    - description: 
-        required: false
-        type: string
-        description: "Short description about local variable"
-    - cloud_data_type: 
-        required: false
-        type: string
-        description: "Type of Cloud data stored in the output variable, such as, resource-group-id, vpc-id, cluster-id, region, etc."
-    - is_hardcoded: 
-        required: true
-        type: bool
-        description: "Is the value hardcoded or computed / derived"
-    - hardcoded_value:
-        required: false
-        type: string
-        description: "Default value of variable, if it exists"
-    - related_to:
-        required: true
-        type: list(string)
-        description: "Local variable is used by a list of dependent resources, dependent datasource or dependent module"
-    - derived_from:
-        required: false
-        type: list(string)
-        description: "Derived from input variables or other local variables"
+    - name:
+        required: true
+        type: string
+        description: "Name of the local variable"
+    - type:
+        required: true
+        type: string
+        description: "Type of the local variable"
+    - example:
+        required: false
+        type: string
+        description: "Example of the local variable"
+    - description:
+        required: false
+        type: string
+        description: "Short description about local variable"
+    - cloud_data_type:
+        required: false
+        type: string
+        description: "Type of Cloud data stored in the output variable, such as, resource-group-id, vpc-id, cluster-id, region, etc."
+    - is_hardcoded:
+        required: true
+        type: bool
+        description: "Is the value hardcoded or computed / derived"
+    - hardcoded_value:
+        required: false
+        type: string
+        description: "Default value of variable, if it exists"
+    - related_to:
+        required: true
+        type: list(string)
+        description: "Local variable is used by a list of dependent resources, dependent datasource or dependent module"
+    - derived_from:
+        required: false
+        type: list(string)
+        description: "Derived from input variables or other local variables"
   provider_dependencies:
     - name:
         required: true
-        type: string
-        description: "Name of the provider"
+        type: string
+        description: "Name of the provider"
         example: "ibm"
       namepspace:
         required : true
-        type : string
-        description : "Namespace of the provider"
+        type : string
+        description : "Namespace of the provider"
         example: "IBM-Cloud"
       source:
         required : true
-        type : string
-        description : "Repository location of the provider"
+        type : string
+        description : "Repository location of the provider"
         example: "IBM-Cloud/ibm"
       version:
         required : true
-        type : string
-        description : "Namespace of the provider"
+        type : string
+        description : "Namespace of the provider"
         example: "1.36.0"
   resources:
-    - type: 
-        required: true
-        type: string
-        description: "Type of the dependent resources"
-      name:
-        required: true
-        type: string
-        description: "User defined name of dependent resource"
-      description: 
-        required: false
-        type: string
-        description: "Short description about dependent resource"
-     provider:
-        required: true
-        type: string
-        description: "Cloud provider type for the dependent resource"
-     dependent_on:
-        required: true
-        type: list(string)
-        description: "List of dependent resources"
+    - type:
+        required: true
+        type: string
+        description: "Type of the dependent resources"
+      name:
+        required: true
+        type: string
+        description: "User defined name of dependent resource"
+      description:
+        required: false
+        type: string
+        description: "Short description about dependent resource"
+     provider:
+        required: true
+        type: string
+        description: "Cloud provider type for the dependent resource"
+     dependent_on:
+        required: true
+        type: list(string)
+        description: "List of dependent resources"
   datasources:
-    - type: 
-        required: true
-        type: string
-        description: "Type of the dependent datasource"
-      name:
-        required: true
-        type: string
-        description: "User defined name of dependent datasource"
-      description: 
-        required: false
-        type: string
-        description: "Short description about dependent datasource"
-      provider:
-        required: true
-        type: string
-        description: "Cloud provider type for the dependent resource"
+    - type:
+        required: true
+        type: string
+        description: "Type of the dependent datasource"
+      name:
+        required: true
+        type: string
+        description: "User defined name of dependent datasource"
+      description:
+        required: false
+        type: string
+        description: "Short description about dependent datasource"
+      provider:
+        required: true
+        type: string
+        description: "Cloud provider type for the dependent resource"
   modules:
-    - name:
-        required: true
-        type: string
-        description: "User defined name for the dependent module"
-      id: 
-        required: true
-        type: string
-        description: "Id of the dependent terraform module (from Hashicorp registry)"
-      source:
-        required: true
-        type: string
-        description: "Source of the dependent module"
-      version:
-        required: false
-        type: string
-        description: "Version of the dependent module"
-      description: 
-        required: false
-        type: string
-        description: "Short description about dependent module" 
+    - name:
+        required: true
+        type: string
+        description: "User defined name for the dependent module"
+      id:
+        required: true
+        type: string
+        description: "Id of the dependent terraform module (from Hashicorp registry)"
+      source:
+        required: true
+        type: string
+        description: "Source of the dependent module"
+      version:
+        required: false
+        type: string
+        description: "Version of the dependent module"
+      description:
+        required: false
+        type: string
+        description: "Short description about dependent module"
 submodules:
   path:
     required : true
-    type : string
-    description : "Module path"
+    type : string
+    description : "Module path"
     example: "modules/logging-instance"
   name:
     required : true
-    type : string
-    description : "Name of the module"
+    type : string
+    description : "Name of the module"
     example: "logging-instance"
   inputs:
     - name:
-        required : true
-        type : string
-        description : "Variable name"
-    - type: 
-        required: true
-        type: string
-        description: "Variable data type, such as string, list(string), integer, etc."
-    - is_required: 
-        required: true
-        type: bool
-        description: "Is the input variable mandatory or not ?"
-    - default_value:
-        required: false
-        type: string
-        description: "Default value of variable, if it exists"
-    - description: 
-        required: false
-        type: string
-        description: "Short description of the input variable"
-    - example:
-        required: false
-        type: string 
-        description: "Example of the input variable"
-    - is_sensitive:
-        required: false
-        type: bool 
-        description: "Does the input variable hold secret, sensitive, credential values or not ?"
-    - related_to:
-        required: true
-        type: list(string)
-        description: "Input variable is related to a list of dependent resources, dependent datasource or dependent module"
-    - min_value:
-        required: false
-        type: integer
-        description: "Minimum value of the input variable"
-    - max_value:
-        required: false
-        type: integer
-        description: "Maximum value of the input variable"
-    - allowed_values:
-        required: false
-        type: list(any) 
-        description: "List of allowed values for the input variable"
-    - min_length:
-        required: false
-        type: integer
-        description: "Minimum length of the string, for the string input variable"
-    - max_length:
-        required: false
-        type: integer
-        description: "Maximum length of the string, for the string input variable"
-    - is_nullable:
-        required: false
-        type: bool
-        description: "Can the variable value be null ?"
-    - is_force_new:
-        required: false
-        type: bool
-        description: "Indicates that altering the input variable value will result in creation of new resource instance"
-    - cloud_data_type: 
-        required: false
-        type: string
-        description: "Type of Cloud data stored in the input variable, such as, resource-group-id, vpc-id, cluster-id, region, etc."
-    - cloud_data_range:
-        required: false
-        type: string
-        description: "Range or scope for the cloud_data_type; for example `cloud_data_type=vpc_id` in `region=us-south`"
-    - regex:
-        required: false
-        type: string
-        description: "Regular experssion used to validate the input variable"
-    - is_provision_controller:
-        required: true
-        type: bool
-        description: "Is the input variable used to control the provisioning of resource ?"
-    - is_count_controller:
-        required: true
-        type: bool
-        description: "Is the input variable used to control the number of instances to be provisioned ?"
+        required : true
+        type : string
+        description : "Variable name"
+    - type:
+        required: true
+        type: string
+        description: "Variable data type, such as string, list(string), integer, etc."
+    - is_required:
+        required: true
+        type: bool
+        description: "Is the input variable mandatory or not ?"
+    - default_value:
+        required: false
+        type: string
+        description: "Default value of variable, if it exists"
+    - description:
+        required: false
+        type: string
+        description: "Short description of the input variable"
+    - example:
+        required: false
+        type: string
+        description: "Example of the input variable"
+    - is_sensitive:
+        required: false
+        type: bool
+        description: "Does the input variable hold secret, sensitive, credential values or not ?"
+    - related_to:
+        required: true
+        type: list(string)
+        description: "Input variable is related to a list of dependent resources, dependent datasource or dependent module"
+    - min_value:
+        required: false
+        type: integer
+        description: "Minimum value of the input variable"
+    - max_value:
+        required: false
+        type: integer
+        description: "Maximum value of the input variable"
+    - allowed_values:
+        required: false
+        type: list(any)
+        description: "List of allowed values for the input variable"
+    - min_length:
+        required: false
+        type: integer
+        description: "Minimum length of the string, for the string input variable"
+    - max_length:
+        required: false
+        type: integer
+        description: "Maximum length of the string, for the string input variable"
+    - is_nullable:
+        required: false
+        type: bool
+        description: "Can the variable value be null ?"
+    - is_force_new:
+        required: false
+        type: bool
+        description: "Indicates that altering the input variable value will result in creation of new resource instance"
+    - cloud_data_type:
+        required: false
+        type: string
+        description: "Type of Cloud data stored in the input variable, such as, resource-group-id, vpc-id, cluster-id, region, etc."
+    - cloud_data_range:
+        required: false
+        type: string
+        description: "Range or scope for the cloud_data_type; for example `cloud_data_type=vpc_id` in `region=us-south`"
+    - regex:
+        required: false
+        type: string
+        description: "Regular experssion used to validate the input variable"
+    - is_provision_controller:
+        required: true
+        type: bool
+        description: "Is the input variable used to control the provisioning of resource ?"
+    - is_count_controller:
+        required: true
+        type: bool
+        description: "Is the input variable used to control the number of instances to be provisioned ?"
   outputs:
-    - name:
-        required: true
-        type: string
-        description: "Name of the output variable"
-    - type: 
-        required: true
-        type: string 
-        description: "Type of the output variable"
-    - description: 
-        required: false
-        type: string
-        description: "Short description about output variable"
-    - example:
-        required: false
-        type: string 
-        description: "Example of the output variable"
-    - is_sensitive:
-        required: false
-        type: bool
-        description: "Does the output variable hold secret, sensitive, credential values or not ?"
-    - cloud_data_type: 
-        required: false
-        type: string
-        description: "Type of Cloud data stored in the output variable, such as, resource-group-id, vpc-id, cluster-id, region, etc."
-    - related_to:
-        required: true
-        type: list(string)
-        description: "Output variable is produced by a list of dependent resources, dependent datasource or dependent module"
-    - derived_from:
-        required: false
-        type: list(string)
-        description: "Derived from input variables or local variables"
+    - name:
+        required: true
+        type: string
+        description: "Name of the output variable"
+    - type:
+        required: true
+        type: string
+        description: "Type of the output variable"
+    - description:
+        required: false
+        type: string
+        description: "Short description about output variable"
+    - example:
+        required: false
+        type: string
+        description: "Example of the output variable"
+    - is_sensitive:
+        required: false
+        type: bool
+        description: "Does the output variable hold secret, sensitive, credential values or not ?"
+    - cloud_data_type:
+        required: false
+        type: string
+        description: "Type of Cloud data stored in the output variable, such as, resource-group-id, vpc-id, cluster-id, region, etc."
+    - related_to:
+        required: true
+        type: list(string)
+        description: "Output variable is produced by a list of dependent resources, dependent datasource or dependent module"
+    - derived_from:
+        required: false
+        type: list(string)
+        description: "Derived from input variables or local variables"
   locals:
-    - name:
-        required: true
-        type: string
-        description: "Name of the local variable"
-    - type: 
-        required: true
-        type: string
-        description: "Type of the local variable"
-    - example:
-        required: false
-        type: string
-        description: "Example of the local variable"
-    - description: 
-        required: false
-        type: string
-        description: "Short description about local variable"
-    - cloud_data_type: 
-        required: false
-        type: string
-        description: "Type of Cloud data stored in the output variable, such as, resource-group-id, vpc-id, cluster-id, region, etc."
-    - is_hardcoded: 
-        required: true
-        type: bool
-        description: "Is the value hardcoded or computed / derived"
-    - hardcoded_value:
-        required: false
-        type: string
-        description: "Default value of variable, if it exists"
-    - related_to:
-        required: true
-        type: list(string)
-        description: "Local variable is used by a list of dependent resources, dependent datasource or dependent module"
-    - derived_from:
-        required: false
-        type: list(string)
-        description: "Derived from input variables or other local variables"
+    - name:
+        required: true
+        type: string
+        description: "Name of the local variable"
+    - type:
+        required: true
+        type: string
+        description: "Type of the local variable"
+    - example:
+        required: false
+        type: string
+        description: "Example of the local variable"
+    - description:
+        required: false
+        type: string
+        description: "Short description about local variable"
+    - cloud_data_type:
+        required: false
+        type: string
+        description: "Type of Cloud data stored in the output variable, such as, resource-group-id, vpc-id, cluster-id, region, etc."
+    - is_hardcoded:
+        required: true
+        type: bool
+        description: "Is the value hardcoded or computed / derived"
+    - hardcoded_value:
+        required: false
+        type: string
+        description: "Default value of variable, if it exists"
+    - related_to:
+        required: true
+        type: list(string)
+        description: "Local variable is used by a list of dependent resources, dependent datasource or dependent module"
+    - derived_from:
+        required: false
+        type: list(string)
+        description: "Derived from input variables or other local variables"
   provider_dependencies:
     - name:
         required: true
-        type: string
-        description: "Name of the provider"
+        type: string
+        description: "Name of the provider"
         example: "ibm"
       namepspace:
         required : true
-        type : string
-        description : "Namespace of the provider"
+        type : string
+        description : "Namespace of the provider"
         example: "IBM-Cloud"
       source:
         required : true
-        type : string
-        description : "Repository location of the provider"
+        type : string
+        description : "Repository location of the provider"
         example: "IBM-Cloud/ibm"
       version:
         required : true
-        type : string
-        description : "Namespace of the provider"
+        type : string
+        description : "Namespace of the provider"
         example: "1.36.0"
   resources:
-    - type: 
-        required: true
-        type: string
-        description: "Type of the dependent resources"
-      name:
-        required: true
-        type: string
-        description: "User defined name of dependent resource"
-      description: 
-        required: false
-        type: string
-        description: "Short description about dependent resource"
-     provider:
-        required: true
-        type: string
-        description: "Cloud provider type for the dependent resource"
-     dependent_on:
-        required: true
-        type: list(string)
-        description: "List of dependent resources"
+    - type:
+        required: true
+        type: string
+        description: "Type of the dependent resources"
+      name:
+        required: true
+        type: string
+        description: "User defined name of dependent resource"
+      description:
+        required: false
+        type: string
+        description: "Short description about dependent resource"
+     provider:
+        required: true
+        type: string
+        description: "Cloud provider type for the dependent resource"
+     dependent_on:
+        required: true
+        type: list(string)
+        description: "List of dependent resources"
   datasources:
-    - type: 
-        required: true
-        type: string
-        description: "Type of the dependent datasource"
-      name:
-        required: true
-        type: string
-        description: "User defined name of dependent datasource"
-      description: 
-        required: false
-        type: string
-        description: "Short description about dependent datasource"
-      provider:
-        required: true
-        type: string
-        description: "Cloud provider type for the dependent resource"
+    - type:
+        required: true
+        type: string
+        description: "Type of the dependent datasource"
+      name:
+        required: true
+        type: string
+        description: "User defined name of dependent datasource"
+      description:
+        required: false
+        type: string
+        description: "Short description about dependent datasource"
+      provider:
+        required: true
+        type: string
+        description: "Cloud provider type for the dependent resource"
   modules:
-    - name:
-        required: true
-        type: string
-        description: "User defined name for the dependent module"
-      id: 
-        required: true
-        type: string
-        description: "Id of the dependent terraform module (from Hashicorp registry)"
-      source:
-        required: true
-        type: string
-        description: "Source of the dependent module"
-      version:
-        required: false
-        type: string
-        description: "Version of the dependent module"
-      description: 
-        required: false
-        type: string
-        description: "Short description about dependent module" 
-
-  
+    - name:
+        required: true
+        type: string
+        description: "User defined name for the dependent module"
+      id:
+        required: true
+        type: string
+        description: "Id of the dependent terraform module (from Hashicorp registry)"
+      source:
+        required: true
+        type: string
+        description: "Source of the dependent module"
+      version:
+        required: false
+        type: string
+        description: "Version of the dependent module"
+      description:
+        required: false
+        type: string
+        description: "Short description about dependent module"

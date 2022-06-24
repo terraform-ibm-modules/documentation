@@ -1,18 +1,20 @@
-# IBM Cloud Terraform Modules - Reporting Bugs
+# Report an issue or request a feature
+
+?> *TODO* Update this with steps and update links
 
 This section guides you through submitting a bug report for IBM Cloud Terraform Modules. Following these guidelines helps maintainers to understand your report, reproduce the behavior, and find related reports.
 
-* Before creating bug reports, please check [this repo](https://github.com/terraform-ibm-modules/terraform-ibm-issue-tracker/issues) as you might find out that you don't need to create one. 
+* Before creating bug reports, please check [this repo](https://github.com/terraform-ibm-modules/terraform-ibm-issue-tracker/issues) as you might find out that you don't need to create one.
 
-* When you are creating a bug report, please use the [ISSUE-TEMPLATE](https://github.com/terraform-ibm-modules/terraform-ibm-issue-tracker/issues/new/choose). 
+* When you are creating a bug report, please use the [ISSUE-TEMPLATE](https://github.com/terraform-ibm-modules/terraform-ibm-issue-tracker/issues/new/choose).
 
 * Fill out [the required template](https://github.com/terraform-ibm-modules/terraform-ibm-issue-tracker/issues/new/choose), the information it asks for helps us resolve issues faster.
 
-**Note:** If you find a **Closed** issue that seems like it is the same thing that you're experiencing, open a new issue and include a link to the original issue in the body of your new one.
+?> **Tip** If you find a closed issue that seems to what you're experiencing, open a new issue and include a link to the original issue in the body of your new one.
 
-## How Do I Submit A (Good) Bug Report?
+## How do i submit a (good) bug report?
 
-Bugs are tracked as [GitHub issues](https://github.com/terraform-ibm-modules/terraform-ibm-issue-tracker/issues). 
+Bugs are tracked as [GitHub issues](https://github.com/terraform-ibm-modules/terraform-ibm-issue-tracker/issues).
 
 Explain the problem and include additional details to help maintainers reproduce the problem:
 

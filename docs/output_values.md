@@ -9,10 +9,10 @@ Output values are like the return values of a Terraform module, and have several
 
 Each output value exported by a module must be declared using an output block:
 
-```
+```hcl
 output "cos_instance_id" {
   description = "The ID of the cos instance"
-  value       = ibm_resource_instance.cos_instance.id  
+  value       = ibm_resource_instance.cos_instance.id
 }
 ```
 
@@ -28,7 +28,7 @@ In a parent module, outputs of child modules are available in expressions as mod
 
 ## Usage
 
-```
+```hcl
 module "cos" {
   source = "../../modules/cos_instance"
 
@@ -42,7 +42,7 @@ module "cos_bucket" {
   source = "../../modules/cos_bucket"
 
   bucket_name          = var.bucket_name
-  cos_instance_id      = module.cos.cos_instance_id  
+  cos_instance_id      = module.cos.cos_instance_id
   location             = var.location
   storage_class        = var.storage_class
 
