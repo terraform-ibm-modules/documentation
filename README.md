@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# documentation
-=======
 # IBM Cloud Terraform modules - Guidelines
 
 This repo captures several guidelines to contribute to either existing repo or creating new repo under [terraform-ibm-modules](https://github.com/terraform-ibm-modules) org. 
@@ -24,4 +21,3 @@ This repo captures several guidelines to contribute to either existing repo or c
  * List of variables it requires
  * Example showing how to consume the module
      
->>>>>>> ec6791122ad55adbbe5b11dd307d06e9aff40bbd
