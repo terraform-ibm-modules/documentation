@@ -1,20 +1,10 @@
-# Regular developer tasks dev-maintenance
-
-?> *TODO* update the content to work with modules in `terraform-ibm-modules` in GitHub.
+# Regular developer tasks :id=dev-maintenance
 
 Run these commands as needed after you set up your development environment. To set up your environment, see [Local development setup](local-dev-setup.md).
 
 ## Maintenance tasks :id=dev-maint-tasks
 
 Run these commands to keep your environment up to date.
-
-### Update the Docker image :id=dev-maint-update-docker
-
-Regularly run the following command to pull the latest stable Docker image if you set up your environment [by using Docker](local-dev-setup.md#option-1-use-the-docker-image-recommended). The image is built every day.
-
-```bash
-make docker-pull ARTIFACTORY_USERNAME=user@ibm.com ARTIFACTORY_PASSWORD=XXX
-```
 
 ### Update your local Git submodule version :id=dev-maint-update-local-sub
 
@@ -42,7 +32,7 @@ pre-commit run --all-files
 
 ## Set and audit a detect-secrets baseline :id=dev-maint-ds
 
-The [detect-secrets](https://github.com/ibm/detect-secrets){: external} tool runs as a pre-commit hook to ensure that no secret values are committed to GitHub. You can run the following commands to update your local file and push changes.
+The [detect-secrets](https://github.com/ibm/detect-secrets) tool runs as a pre-commit hook to ensure that no secret values are committed to GitHub. You can run the following commands to update your local file and push changes.
 
 ### Set a baseline :id=dev-maint-ds-baseline
 

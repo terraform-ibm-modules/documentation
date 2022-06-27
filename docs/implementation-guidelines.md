@@ -1,10 +1,10 @@
-# Implementation Guidelines
+# Implementation Guidelines :id= imp-gls
 
-## Module structure
+## Module structure :id=imp-gls-struct
 
-A common [module structure](module_structure.md) is available. Any new module should adhere with this structure. These guidelines are broadly based on the ones prescribed by Hashicorp.
+A common [module structure](module-structure.md) is available. Any new module should adhere with this structure. These guidelines are broadly based on the ones prescribed by Hashicorp.
 
-## Module namimg
+## Module namimg :id=imp-gls-naming
 
 Module repositories for IBM Cloud must use the three-part name format `terraform-ibm-<NAME>`, where:
 - `<NAME>` reflects the type of infrastructure the module manages.
@@ -14,37 +14,37 @@ Module repositories for IBM Cloud must use the three-part name format `terraform
 
 Module repository can have nested modules:
 - When naming the nested modules, do not repeat the name of the top level module.
-- For example, for a top level module named `terraform-ibm-cos`, do not name the nested module `cos-instance` (since, it will translate to "cos_cos-instance" in the module registry);  instead, use `instance` (to register the child-module as "cos_instance").
+- For example, for a top level module named `terraform-ibm-cos`, do not name the nested module `cos-instance` (because it will translate to "cos_cos-instance" in the module registry); instead, use `instance` (to register the child-module as "cos_instance").
 
-## Module documentation
+## Module documentation :id=imp-gls-docs
 
 Module documentation should be located in the `README.md` file at the same level as the `main.tf` file for each of the modules in a repository, including the example modules. Additional documentation may be located in a sub directory named `docs`.
 
 For consistency across modules, all `README.md` files should follow the same structure. See the [README.md template](https://github.com/terraform-ibm-modules/terraform-ibm-module-template/blob/main/README.md).
 
-## Module variables
+## Module variables :id=imp-gls-vars
 
-### Variable naming:
+### Variable naming :id=imp-gls-var-naming
 
 Input and output variable name must correspond to the names used in the IBM Cloud UI, CLI, or in the IBM Cloud Documentation.
 
 For common variables, use the standard variable names from the template variable dictionary. Schematics has been collecting a dictionary - See link [TODO]
 
-### Variable description:
+### Variable description :id=imp-gls-var-desc
 
 Input and output variables should have a short description in the `variables.tf` and in `README.md` file. Description should be full English sentences. Avoid using abbreviations.
 
 Note that the `README.md` file section is automatically generated based on the description in the `variables.tf` file through the terraform doc pre-commit hook (https://github.com/terraform-ibm-modules/common-dev-assets/blob/main/module-assets/.pre-commit-config.yaml#L28). Therefore, module contributors do not need to manually update the variable description in the `README.md` file.
 
-### Variable defaults:
+### Variable defaults :id=imp-gls-var-def
 
 Include defaults wherever possible and the sensitive flag as appropriate. Only update the meaning of a type with agreement of the governance body.
 
-## Module examples
+## Module examples :id=imp-gls-examples
 
 Every module must contain at least one example. An example is a [root terraform module](https://www.terraform.io/language/modules#the-root-module) that utilizes the module, and demonstrate its usage.
 
-The examples are located under the `/examples` directory. See [module structure](module_structure.md).
+The examples are located under the `/examples` directory. See [module structure](module-structure.md).
 
 Once you add an example, do not forget to link it from the README.md file, under the [Examples section](https://github.com/terraform-ibm-modules/terraform-ibm-module-template#examples)
 
@@ -54,14 +54,14 @@ A few recommendations, and good practices:
 - Add as many examples as necessary to cover the most common usage scenarios of your module. Cover one specific usage scenario per example, rather than attempting to cover multiple usage scenarios in the same example. This keeps examples simple to consume and understand.
 - Put yourself in the shoes of someone who want to quickly kick the tyres and understand how to consume the module in their own terraform code.
 
-## Module validation tests
+## Module validation tests :id=imp-gls-tests
 
 Modules must contains at the minumum one automated validation test that apply, destroy and test idempotency of the module. See [Validation tests](tests.md) for details.
 
-## Module versioning
+## Module versioning :id=imp-gls-versioning
 
 [Git tags](https://git-scm.com/book/en/v2/Git-Basics-Tagging) are used to identify module versions. Release tags are based [semantic version](https://semver.org/) guidelines. For example, v1.0.0.
 
 As a module author or contributor, you do not need to manually release new version. When a Pull Request is merged into the main/master branch, a new releases are automatically created by the ` terraform-ibm-modules` release automation, provided that the validation pipeline passes.
 
-The release version is computed based on the type of change made to the module. The type of change is determined by the commit messages, which follows the [Angular Commit Message Convertions](https://github.com/angular/angular/blob/main/CONTRIBUTING.md#-commit-message-format). [semantic-release engine](https://github.com/semantic-release/semantic-release) is used to generate the semantic version and release.
+The release version is computed based on the type of change made to the module. The type of change is determined by the commit messages, which follows the [Angular commit message format](https://github.com/angular/angular/blob/main/CONTRIBUTING.md#-commit-message-format). The [semantic-release engine](https://github.com/semantic-release/semantic-release) is used to generate the semantic version and release.

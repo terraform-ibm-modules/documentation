@@ -1,5 +1,4 @@
 - Getting started
-
     - [About IBM Cloud Terraform modules](README.md)
 - Consuming modules
 - Contributing modules
@@ -9,14 +8,13 @@
     - [Contributing a module](contribute-module.md)
 - Creating module documentation
 - [Testing your module](test-module.md)
+    - [Validation tests](tests.md)
 - Releasing versions and deprecating modules
 - [Adding your module to IBM Cloud](onboard-ibm-cloud.md)
 - Reference
-    - [Module authoring guidelines](implementation_guidelines.md)
-    - [Design guidelines](design_guidelines.md)
-    - [Module structure](module_structure.md)
-    - [Module inputs](input_variables.md)
-    - [Module outputs](output_values.md)
+    - [Module authoring guidelines](implementation-guidelines.md)
+    - [Design guidelines](design-guidelines.md)
+    - [Module structure](module-structure.md)
     - Governance
 - Help
     - Troubleshooting
