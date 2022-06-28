@@ -24,7 +24,7 @@ For regular maintenance tasks or to run certain pre-commit hooks manually, see [
     - To clone by using HTTPS, run the following command.
 
         ```bash
-        git clone https://github.ibm.com:terraform-ibm-modules/<REPO_NAME>.git
+        git clone https://github.ibm.com/terraform-ibm-modules/<REPO_NAME>.git
         ```
 
         Where `<REPO_NAME>` is an existing `terraform-ibm-modules` repo.
