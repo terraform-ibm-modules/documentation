@@ -6,6 +6,7 @@
         - [Local development setup](local-dev-setup.md)
         - [Regular developer tasks](dev-maintenance.md)
     - [Contributing a module](contribute-module.md)
+    - [GitHub Actions workflows](gh-actions.md)
 - Creating module documentation
 - [Testing your module](test-module.md)
     - [Validation tests](tests.md)

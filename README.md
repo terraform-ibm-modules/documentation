@@ -6,7 +6,7 @@ You can see the rendered documentation at https://terraform-ibm-modules.github.i
 
 ## Contributing to the docs
 
-?> *TODO* Create the docs contribution guide
+:information_source: *TODO* Create the docs contribution guide
 
 To update and manage the documentation, follow these steps in *TODO*
 
@@ -16,7 +16,7 @@ To update and manage the documentation, follow these steps in *TODO*
 
 See [Contributing to the IBM Cloud Terraform modules project](docs/contributing-guidelines.md).
 
-!> **Important**: By submitting a patch, you agree to allow the project owner to license your work under the same license as that used by the project.
+:exclamation: **Important**: By submitting a patch, you agree to allow the project owner to license your work under the same license as that used by the project.
 
 ## Reporting a bug or suggesting a feature
 
