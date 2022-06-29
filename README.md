@@ -16,7 +16,7 @@ To update and manage the documentation, follow these steps in *TODO*
 
 See [Contributing to the IBM Cloud Terraform modules project](docs/contributing-guidelines.md).
 
-:exclamation: **Important**: By submitting a patch, you agree to allow the project owner to license your work under the same license as that used by the project.
+:exclamation: **Important**: By contributing content, you agree to allow the project owner to license your work under the same license as that used by the project.
 
 ## Reporting a bug or suggesting a feature
 
