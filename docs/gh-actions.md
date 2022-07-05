@@ -11,11 +11,11 @@ The following reusable workflows are included in the [terraform-ibm-module-templ
 
     Called from `/.github/workflows/release.yml`.
 
-## How to call reusable workflows
+## How to call common pipeline workflows
 
-If you need to call more reusable workflow files, use the following keywords and syntax:
+If you need to create your own workflow, use the following keywords and syntax:
 
-- Call reusable workflow by using the `uses` keyword.
+- Call the reusable workflow by using the `uses` keyword.
     - Refer to the workflow with `{owner}/{repo}/.github/workflows/{filename}@{ref}`. `{ref}` is a release version, not a branch name, for security reasons. The `renovate` task updates the reference to the most recent semantic version of reusable workflows.
 - Use the `secrets: inherit` keyword to pass secrets from the module workflow. The common pipeline workflows use secrets in the [terraform-ibm-modules](https://github.com/terraform-ibm-modules) project.
 
