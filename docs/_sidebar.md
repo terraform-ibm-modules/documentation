@@ -2,12 +2,11 @@
     - [About IBM Cloud Terraform modules](README.md)
 - Consuming modules
 - Contributing modules
-    - Developer setup and maintenance
-        - [Local development setup](local-dev-setup.md)
-        - [Regular developer tasks](dev-maintenance.md)
+    - [Local development setup](local-dev-setup.md)
+    - [Regular developer tasks](dev-maintenance.md)
     - [Contributing a module](contribute-module.md)
     - [GitHub Actions workflows](gh-actions.md)
-- Creating module documentation
+    - Creating docs for your module
 - [Testing your module](test-module.md)
     - [Validation tests](tests.md)
 - Releasing versions and deprecating modules
@@ -17,8 +16,8 @@
     - [Design guidelines](design-guidelines.md)
     - [Module structure](module-structure.md)
     - Governance
-- Help
-    - Troubleshooting
+- Troubleshooting
     - [Known issues](issues.md)
-    - [Report and issue or request a feature](support.md)
-    - [Communities](communities.md)
+- [Report and issue or request a feature](support.md)
+- [Communities](communities.md)
+- [Contributing to the docs](contributing-docs.md)
