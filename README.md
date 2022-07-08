@@ -8,10 +8,10 @@ This repository is configured to publish changes to the `main` branch through Gi
 
 ## Contributing to the project
 
-See the [Contributing guide](contributing.md).
+See the [Contributing guide](CONTRIBUTING.md).
 
 :exclamation: **Important**: By contributing content, you agree to allow the project owner to license your work under the same license as that used by the project.
 
 ## Reporting a bug or suggesting a feature
 
-See [Report an issue or request a feature](docs/support.md).
+See [Report an issue or request a feature](docs/SUPPORT.md).
