@@ -18,6 +18,6 @@
     - Governance
 - Troubleshooting
     - [Known issues](issues.md)
-- [Report and issue or request a feature](SUPPORT.md)
+- [Report and issue or request a feature](support.md)
 - [Communities](communities.md)
 - [Contributing to the docs](contribute-docs.md)

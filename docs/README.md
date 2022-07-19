@@ -4,7 +4,7 @@ The IBM Cloud Terraform modules project is an collection of open source Terrafor
 
 [Terraform](https://www.terraform.io/) is an open source project that lets you specify your cloud infrastructure resources and services by using the high-level scripting HashiCorp Configuration Language (HCL).
 
-## Benefits of using IBM Solution as code :id=abt-benefits
+## Benefits of using IBM Solution as code
 
 ?> _TODO_: Update this information to pertain to P.N
 
