@@ -1,4 +1,4 @@
-# Communities :id=communities
+# Communities
 
 - Engage with community members about Terraform at [Hashicorp Discuss](https://discuss.hashicorp.com/c/terraform-core)
 - Find answers and ask questions on Stack Overflow:

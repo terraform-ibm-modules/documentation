@@ -1,6 +1,9 @@
   /* Plugin: Copy Code
   ============================================================================= */
   :root {
+    --base-font-size: 14px;
+    --sidebar-width: 25rem;
+    --content-max-width: 75em;
     --copycode-background: #808080;
     --copycode-color: #fff;
   }
@@ -13,8 +16,8 @@
     --search-padding: ;
 
     /* Clear Button */
-    --search-clear-icon-color1: ;
-    --search-clear-icon-color2: ;
+    --search-clear-icon-color1: #fff;
+    --search-clear-icon-color2: #808080;
 
     /* Input */
     --search-input-background-color: ;
