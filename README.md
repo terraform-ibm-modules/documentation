@@ -12,30 +12,30 @@ You can see the published documentation at https://terraform-ibm-modules.github.
     - [About IBM Cloud Terraform modules](https://terraform-ibm-modules.github.io/documentation/#/README)
 - Consuming modules (coming)
 - Contributing modules
-    - [Local development setup](docs/local-dev-setup.md)
-    - [Regular developer tasks](docs/dev-maintenance.md)
-    - [Contributing a module](docs/contribute-module.md)
-    - [Validation tests](docs/tests.md)
-    - [GitHub Actions workflows](docs/gh-actions.md)
+    - [Local development setup](https://terraform-ibm-modules.github.io/documentation/#/local-dev-setup.md)
+    - [Regular developer tasks](https://terraform-ibm-modules.github.io/documentation/#/dev-maintenance.md)
+    - [Contributing a module](https://terraform-ibm-modules.github.io/documentation/#/contribute-module.md)
+    - [Validation tests](https://terraform-ibm-modules.github.io/documentation/#/tests.md)
+    - [GitHub Actions workflows](https://terraform-ibm-modules.github.io/documentation/#/gh-actions.md)
     - Creating docs for your module (coming)
-- [Adding your module to IBM Cloud](docs/onboard-ibm-cloud.md)
+- [Adding your module to IBM Cloud](https://terraform-ibm-modules.github.io/documentation/#/onboard-ibm-cloud.md)
 - Reference
-    - [Module authoring guidelines](docs/implementation-guidelines.md)
-    - [Design guidelines](docs/design-guidelines.md)
-    - [Module structure](docs/module-structure.md)
+    - [Module authoring guidelines](https://terraform-ibm-modules.github.io/documentation/#/implementation-guidelines.md)
+    - [Design guidelines](https://terraform-ibm-modules.github.io/documentation/#/design-guidelines.md)
+    - [Module structure](https://terraform-ibm-modules.github.io/documentation/#/module-structure.md)
     - Governance (coming)
 - Troubleshooting
-    - [Known issues](docs/issues.md)
-- [Report and issue or request a feature](docs/support.md)
-- [Communities](docs/communities.md)
-- [Contributing to the docs](docs/contribute-docs.md)
+    - [Known issues](https://terraform-ibm-modules.github.io/documentation/#/issues.md)
+- [Report and issue or request a feature](https://terraform-ibm-modules.github.io/documentation/#/support.md)
+- [Communities](https://terraform-ibm-modules.github.io/documentation/#/communities.md)
+- [Contributing to the docs](https://terraform-ibm-modules.github.io/documentation/#/contribute-docs.md)
 
 ## Contributing to the project
 
-See the [Contributing guide](CONTRIBUTING.md).
+See the [Contributing guide](https://github.com/terraform-ibm-modules/.github/blob/main/.github/CONTRIBUTING.md).
 
 :exclamation: **Important**: By contributing content, you agree to allow the project owner to license your work under the same license as that used by the project.
 
 ## Reporting a bug or suggesting a feature
 
-See [Report an issue or request a feature](docs/SUPPORT.md).
+See [Report an issue or request a feature](docs/support.md).
