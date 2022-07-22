@@ -1,8 +1,8 @@
 # Module structure
 
-A module is a container for multiple resources that are used together. The `.tf` files in your working directory form the root module and are called when you run `terraform plan` or `terraform apply`.
+A module is a container for multiple resources that are used together. Each module is typically located in its own repository in the `terraform-ibm-modules` organization. This placement enables each module to have its own release lifecycle.
 
-Each module is typically located in its own repository in the `terraform-ibm-modules` organization. This placement enables each module to have its own release lifecycle. The module might call other modules and connect them by passing output values from one module to input values of another. The repository might also include nested modules in a `modules/` directory.
+A module might call other modules and connect them by passing output values from one module to input values of another. The repository might also include nested modules in a `modules` directory.
 
 The following structure describes the [terraform-ibm-module-template](https://github.com/terraform-ibm-modules/terraform-ibm-module-template). Use the template to create a repository for new modules. The structure is based on the guidelines from Hashicorp.
 
