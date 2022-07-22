@@ -20,6 +20,4 @@ Follow these steps to set up your local development environment for working with
 
 ## Next steps
 
-That's it. Your development environment is set up the `terraform-ibm-modules` project. Now start coding.
-
-- [Contribute to a module](contribute-module.md).
+That's it. Your development environment is set up the `terraform-ibm-modules` project. Now [contribute to a module](contribute-module.md).

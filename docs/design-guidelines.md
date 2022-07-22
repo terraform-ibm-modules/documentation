@@ -1,5 +1,7 @@
 # Design guidelines
 
+?> _DRAFT_: This content is not finalized
+
 Based on certain characteristics, IBM Cloud Terraform modules are categorized into 3 types.
 
 A badge in the `README.md` file of each module indicates the type of module. [TO BE DONE]

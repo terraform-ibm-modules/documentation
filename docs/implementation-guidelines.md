@@ -2,7 +2,7 @@
 
 ## Module structure
 
-A common [module structure](module-structure.md) is available. Any new module should adhere with this structure. These guidelines are broadly based on the ones that are prescribed by Hashicorp.
+Modules should adhere to a common [module structure](module-structure.md).
 
 ## Module names
 
