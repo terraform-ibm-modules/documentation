@@ -5,11 +5,9 @@
     - [Local development setup](local-dev-setup.md)
     - [Regular developer tasks](dev-maintenance.md)
     - [Contributing a module](contribute-module.md)
-    - [GitHub Actions workflows](gh-actions.md)
-    - Creating docs for your module
-- [Testing your module](test-module.md)
     - [Validation tests](tests.md)
-- Releasing versions and deprecating modules
+    - [GitHub Actions workflows](gh-actions.md)
+    - Creating docs for your module (coming)
 - [Adding your module to IBM Cloud](onboard-ibm-cloud.md)
 - Reference
     - [Module authoring guidelines](implementation-guidelines.md)

@@ -123,7 +123,7 @@ After your PR tests pass, create a pull request.
 1.  Open a pull request with a clear title and description. Be sure to merge the latest from upstream before you create the PR.
 
     - Open your PR from your branch to `main`.
-    - Start by contributing a draft PR, which cannot be merged, so that the project maintainers can work with you to structure the PR for the broadest use. To create a draft pull request, use the drop-down and select **Create Draft Pull Request**, then click **Draft Pull Request**.
+    - Start by contributing a draft PR. A draft pull request provides insight about the work that you're doing but cannot be merged. To create a draft pull request, use the drop-down and select **Create Draft Pull Request**, then click **Draft Pull Request**.
         - When you're ready to merge, mark your draft pull request as ready for review. For more information, see [Changing the stage of a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/changing-the-stage-of-a-pull-request).
     - Make sure that the [GitHub Actions workflows](gh-actions.md) are running successfully over the PR.
 
