@@ -21,10 +21,10 @@ A template metadata generator tool generates the metadata of the variables from 
 | `value` | string | Value of the variable |
 | `type` | string | Data type of the variable |
 | `description` | string | Description of the variable |
-| `source` | string | Source identifier of the module in the form `.` |
+| `source` | string | Source identifier of the module in the form `<resource/data_source/module_name>.<resource/data_source/module_identifier>` |
 | `attribute_name` | string | Name of the argument in the module block that the variable is mapped to. When the value is part of the Terraform meta-arguments such as `count`, ignore data that is related to the provider. |
-| `required | bool | Whether the variable is required |
-| `default | bool | Default value of the variable |
+| `required` | bool | Whether the variable is required |
+| `default` | bool | Default value of the variable |
 | `computed` | bool | Whether the variable is computed or derived (`Computed` behavior) |
 | `elem` | provider schema struct | Child arguments of complex variable types |
 | `immutable` | bool | If `true`, altering the value of the variable destroys and re-creates a resource (`ForceNew` behavior) |
