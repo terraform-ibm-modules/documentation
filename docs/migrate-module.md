@@ -2,6 +2,8 @@
 
 Module repos created before July 2022 don't include the logic that is needed to pass the continuous integration (CI) tests and to publish the modules to the IBM Cloud catalog. Follow these steps to update an existing repo in the terraform-ibm-modules GitHub organization.
 
+For more information about how new modules are organized, see [module structure](module-structure.md).
+
 ## Before you begin
 
 - If you're running Microsoft Windows, set up Windows Subsystem for Linux [WSL](https://ubuntu.com/wsl) and run commands within WSL.
