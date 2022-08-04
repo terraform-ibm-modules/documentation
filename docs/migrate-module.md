@@ -109,7 +109,7 @@ Create or update at least one end-to-end example to test your code changes. You 
 
 ?> **Tip:** You can use the [migration script](https://github.com/terraform-ibm-modules/common-dev-assets/blob/main/repo_migration.sh) in the `common-dev-assets` repo to add the CI code.
 
-1.  Implement (or update) the logic for your module examples by updating the `main.tf`, `version.tf`, `variables.tf`, and `outputs.tf` Terraform files in the `examples/default` directory.
+1.  Implement (or update) the logic for your module examples by updating the `main.tf`, `outputs.tf`, `provider.tf`, `variables.tf`, and  `version.tf` Terraform files in the `examples/default` directory.
 1.  Update the `README.md` file in the same examples directory to provide some basic information about what the example does.
 
 [inc-examples](inc-examples.md ':include')
