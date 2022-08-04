@@ -1,36 +1,71 @@
-# Update an older module
+# Updating an older module
 
 Modules in the IBM Terraform modules project need specific logic and workflows to pass the continuous integration (CI) tests and to publish the modules to the IBM Cloud catalog. To update a Terraform repo to these requirements and add it to the terraform-ibm-modules GitHub project, follow these steps.
 
 For more information about how new modules are organized, see [module structure](module-structure.md).
 
+?> Tip: If you want to contribute a new module instead of migrating one, follow the steps in [Contributing a module](contribute-module.md).
+
 ## Before you begin
 
 - Make sure that you meet the prerequisites in the [Before you begin](local-dev-setup.md#before-you-begin) section of "Local development setup" in the docs.
 
-## Create an empty module
+## Request an empty module
 
-Create an empty module repo in the `terraform-ibm-modules` GitHub project.
+Submit a request in the [terraform-ibm-issue-tracker](https://github.com/terraform-ibm-modules/terraform-ibm-issue-tracker/issues/new/choose) with your idea for a module.
 
-!> You likely do not have permissions to create a repo in the project. Submit an issue in the [terraform-ibm-issue-tracker](https://github.com/terraform-ibm-modules/terraform-ibm-issue-tracker/issues/new/choose) to request a repo.
+[inc-module-name-desc](inc-module-name-desc.md ':include')
 
-1.  In the upper right of any page in the [terraform-ibm-modules](https://github.com/terraform-ibm-modules) organization, use the **+** menu, and select **New repository**.
-1.  Select `terraform-ibm-modules` as the owner.
-1.  Enter a name for the module in format `terraform-ibm-<NAME>`, where `<NAME>` reflects the type of infrastructure that the module manages. Use hyphens as delimiters for names with multiple words (for example, terraform-ibm-`activity-tracker`).
-1.  Provide a short description of the module. The description is displayed under the repository title on the [organization page](https://github.com/terraform-ibm-modules) and in the **About** section of the repository. Use the description to help users understand what your repo does by looking at the description.
-1.  Confirm that you are creating a public repository in the terraform-ibm-modules organization and click **Create repository**.
+When your repo is created, return to this topic and continue the steps.
 
 ## Clone and initialize the repo
 
-Clone the repo that you just created.
+Clone the repo and configure the submodule.
 
-[inc-clone.md](inc-clone.md ':include')
+1.  Clone the repo you want to start working with. Don't fork the repo. The common pipeline automation uses access tokens that are available only on PRs that are opened from branches off the repos.
 
-## Migrate the module code
+    - To clone by using SSH, run the following command. You need a valid SSH key for github.com. For more information, see the steps in the [GitHub docs](https://docs.github.com/en/authentication/connecting-to-github-with-ssh).
+
+        ```bash
+        git clone git@github.com:terraform-ibm-modules/<REPO_NAME>.git
+        ```
+
+    - To clone by using HTTPS, run the following command.
+
+        ```bash
+        git clone https://github.ibm.com/terraform-ibm-modules/<REPO_NAME>.git
+        ```
+
+        Where `<REPO_NAME>` is an existing `terraform-ibm-modules` repo.
+1.  Add the Git submodule.
+
+   ?> **Tip:** You can use the [migration script](https://github.com/terraform-ibm-modules/common-dev-assets/blob/main/repo_migration.sh) in the `common-dev-assets` repo to add the submodule and links.
+
+    ```bash
+    git submodule add https://github.com/terraform-ibm-modules/common-dev-assets
+    ```
+
+1.  Create symbolic links to the submodule by running these commands from the root of the module:
+
+    ```bash
+    ln -s common-dev-assets/module-assets/basic-pre-commit/.pre-commit-config.yaml .pre-commit-config.yaml
+    git add .pre-commit-config.yaml
+    ln -s common-dev-assets/module-assets/ci ci
+    git add ci
+    ln -s common-dev-assets/module-assets/Makefile Makefile
+    git add Makefile
+    ln -s common-dev-assets/module-assets/Brewfile Brewfile
+    git add Brewfile
+    ```
+
+## Migrate your module code
+
+Bring your Terraform logic from your older repo to the new repo.
 
 1.  From the root of the newly cloned repo, create a branch to work in by running the command `git checkout -b ＜YOUR_WORKING_BRANCH>`. Replace `＜YOUR_WORKING_BRANCH>` with your own branch name.
-s
-1.  Push the module code from the older repo to the new one by running these commands:
+
+1.  Push the module code from the older repo to the new one by running these commands. (You can copy the code if you don't want to use Git.)
+
     1.  Add the new repo as a remote to the older repo:
 
         ```bash
@@ -74,7 +109,7 @@ Create or update at least one end-to-end example to test your code changes. You 
 
 ?> **Tip:** You can use the [migration script](https://github.com/terraform-ibm-modules/common-dev-assets/blob/main/repo_migration.sh) in the `common-dev-assets` repo to add the CI code.
 
-1.  Implement (or update) the logic for your module examples by updating the `main.tf`, `version.tf`, `variables.tf`, and `version.tf` Terraform files in the `examples/default` directory.
+1.  Implement (or update) the logic for your module examples by updating the `main.tf`, `version.tf`, `variables.tf`, and `outputs.tf` Terraform files in the `examples/default` directory.
 1.  Update the `README.md` file in the same examples directory to provide some basic information about what the example does.
 
 [inc-examples](inc-examples.md ':include')
