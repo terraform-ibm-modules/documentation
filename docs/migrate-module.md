@@ -1,18 +1,18 @@
 # Update an older module
 
-Module repos created before July 2022 don't include the logic that is needed to pass the continuous integration (CI) tests and to publish the modules to the IBM Cloud catalog. Follow these steps to update an existing repo in the terraform-ibm-modules GitHub organization.
+Modules in the IBM Terraform modules project need specific logic and workflows to pass the continuous integration (CI) tests and to publish the modules to the IBM Cloud catalog. To update a Terraform repo to these requirements and add it to the terraform-ibm-modules GitHub project, follow these steps.
 
 For more information about how new modules are organized, see [module structure](module-structure.md).
 
 ## Before you begin
 
-- If you're running Microsoft Windows, set up Windows Subsystem for Linux [WSL](https://ubuntu.com/wsl) and run commands within WSL.
-- Make sure that you have a current version of Python 3 and pip.
-- Make sure that you have a recent stable version of [Go](https://go.dev/doc/install) installed and available in your PATH environment variable.
+- Make sure that you meet the prerequisites in the [Before you begin](local-dev-setup.md#before-you-begin) section of "Local development setup" in the docs.
 
 ## Create an empty module
 
-Create an empty module repo in the `terraform-ibm-modules` GitHub organization.
+Create an empty module repo in the `terraform-ibm-modules` GitHub project.
+
+!> You likely do not have permissions to create a repo in the project. Submit an issue in the [terraform-ibm-issue-tracker](https://github.com/terraform-ibm-modules/terraform-ibm-issue-tracker/issues/new/choose) to request a repo.
 
 1.  In the upper right of any page in the [terraform-ibm-modules](https://github.com/terraform-ibm-modules) organization, use the **+** menu, and select **New repository**.
 1.  Select `terraform-ibm-modules` as the owner.
@@ -48,9 +48,11 @@ s
         git push origin2 main
         ```
 
-## Add the newer CI/CD code
+## Add the newer CI code
 
 Copy the following files from the `.github` directory of the terraform-ibm-module-template.
+
+?> **Tip:** You can use the [migration script](https://github.com/terraform-ibm-modules/common-dev-assets/blob/main/repo_migration.sh) in the `common-dev-assets` repo to add the CI code.
 
 1.  Browse to the [terraform-ibm-module-template](https://github.com/terraform-ibm-modules/terraform-ibm-module-template/blob/main/.github) `.github` directory.
 1.  Copy the `settings.yml` file.
@@ -58,7 +60,7 @@ Copy the following files from the `.github` directory of the terraform-ibm-modul
 
 ## Make updates to pass the pre-commit checks
 
-1.  Run the pre-commit hooks From the root of the newly cloned repo to identify other changes that you need to make:
+1.  Run the pre-commit hooks from the root of the newly cloned repo to identify other changes that you need to make:
 
     ```bash
     pre-commit run --all-files
@@ -70,6 +72,8 @@ Copy the following files from the `.github` directory of the terraform-ibm-modul
 
 Create or update at least one end-to-end example to test your code changes. You can see the structure in the [examples](https://github.com/terraform-ibm-modules/terraform-ibm-module-template/tree/main/examples) directory of the terraform-ibm-module-template.
 
+?> **Tip:** You can use the [migration script](https://github.com/terraform-ibm-modules/common-dev-assets/blob/main/repo_migration.sh) in the `common-dev-assets` repo to add the CI code.
+
 1.  Implement (or update) the logic for your module examples by updating the `main.tf`, `version.tf`, `variables.tf`, and `version.tf` Terraform files in the `examples/default` directory.
 1.  Update the `README.md` file in the same examples directory to provide some basic information about what the example does.
 
@@ -77,7 +81,7 @@ Create or update at least one end-to-end example to test your code changes. You 
 
 ## Run examples and update the PR tests
 
-Validate your Terraform logic by running the examples. Then update the test scripts to run the examples with pull requests.
+Validate your Terraform logic by running the examples. Then, update the test scripts to run the examples with pull requests.
 
 1.  Run your examples to test the logic. For more information, see [run examples and clean up](contribute-module.md#run-examples-and-clean-up) in the docs.
 
