@@ -12,19 +12,19 @@ Follow these steps to create or update a module.
 
 ## Before you begin
 
-- Submit an issue in the [terraform-ibm-issue-tracker](https://github.com/terraform-ibm-modules/terraform-ibm-issue-tracker/issues/new/choose) with your idea for a module.
 - If you're running Microsoft Windows, set up Windows Subsystem for Linux [WSL](https://ubuntu.com/wsl) and run commands within WSL.
 - Make sure that you have a current version of Python 3 and pip.
 - Make sure that you have a recent stable version of [Go](https://go.dev/doc/install) installed and available in your PATH environment variable.
 
-## Create a module
+## Request a repo
 
-If you're updating an existing module, skip to the next step. Otherwise, create a module repo from the [terraform-ibm-module-template](https://github.com/terraform-ibm-modules/terraform-ibm-module-template).
+?> **Tip:** If you're updating an existing module, skip to the next step.
 
-1.  Create a repository from the [terraform-ibm-module-template](https://github.com/terraform-ibm-modules/terraform-ibm-module-template) repo by clicking `Use this template` in the upper right of the GitHub UI.
-1.  Select `terraform-ibm-modules` as the owner.
-1.  Enter a name for the module in format `terraform-ibm-<NAME>`, where `<NAME>` reflects the type of infrastructure that the module manages. Use hyphens as delimiters for names with multiple words (for example, terraform-ibm-`activity-tracker`).
-1.  Provide a short description of the module. The description is displayed under the repository title on the [organization page](https://github.com/terraform-ibm-modules) and in the **About** section of the repository. Use the description to help users understand what your repo does by looking at the description.
+Submit a request for a new module repo in the [terraform-ibm-issue-tracker](https://github.com/terraform-ibm-modules/terraform-ibm-issue-tracker/issues/new/choose) with your idea for a module.
+
+[inc-module-name-desc](inc-module-name-desc.md ':include')
+
+When your repo is created, return to this topic and continue the steps.
 
 ## Clone and initialize the repo
 

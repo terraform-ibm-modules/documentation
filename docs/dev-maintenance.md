@@ -24,7 +24,7 @@ git submodule update --remote --merge
 
 ## Run the pre-commit hooks manually
 
-The GoldenEye pre-commit hooks run against changed files when you commit changes to Git. To run the pre-commit hooks against all files, run the following command:
+The pre-commit hooks run against changed files when you commit changes to Git. To run the pre-commit hooks against all files, run the following command:
 
 ```bash
 pre-commit run --all-files
