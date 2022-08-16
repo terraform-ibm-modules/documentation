@@ -10,7 +10,7 @@ Follow these steps to set up your local development environment for working with
 - Make sure that you have a current version of Python 3 and pip.
 - Make sure that a recent stable version of [Go is installed](https://go.dev/doc/install) and available in your PATH environment variable.
 - Make sure the [Brew](https://brew.sh) is installed
-- Make sure that [curl](https://curl.se/) and unzip are installed.
+- Make sure that [curl](https://curl.se/) and a .zip file tool are installed.
 
 ## Clone and initialize the repo
 
