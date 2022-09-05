@@ -70,6 +70,14 @@ This tool allows viewing variable information in json format
             "cloud_data_type" : "ResourceInstance",
             "cloud_data_range": ["service:kms"]
         }
+        "resource_group": {
+            "name": "resource_group",
+            "type": "string",
+            "description": "Resource Id of instance",
+            "required":true,
+            "cloud_data_type" : "ResourceGroup",
+            "cloud_data_range": ["resolved_to:id"]
+        }
     }
 }
 ```
