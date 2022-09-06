@@ -1,5 +1,6 @@
 - Getting started
     - [About IBM Cloud Terraform modules](README.md)
+    - [Allen added this to the sidebar](fake.md)
 - Consuming modules
 - Contributing modules
     - [Local development setup](local-dev-setup.md)
