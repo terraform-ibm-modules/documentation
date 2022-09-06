@@ -7,7 +7,7 @@ The IBM Cloud&reg; Terraform modules project is a collection of curated IBM Clou
 You can see the published documentation at https://terraform-ibm-modules.github.io/documentation/.
 
 ### Table of contents
-
+<!-- BEGIN TOC -->
 - Getting started
     - [About IBM Cloud Terraform modules](https://terraform-ibm-modules.github.io/documentation/#/README)
 - Consuming modules (coming)
@@ -29,6 +29,7 @@ You can see the published documentation at https://terraform-ibm-modules.github.
 - [Report and issue or request a feature](https://terraform-ibm-modules.github.io/documentation/#/support.md)
 - [Communities](https://terraform-ibm-modules.github.io/documentation/#/communities.md)
 - [Contributing to the docs](https://terraform-ibm-modules.github.io/documentation/#/contribute-docs.md)
+<!-- END TOC -->
 
 ## Contributing to the project
 

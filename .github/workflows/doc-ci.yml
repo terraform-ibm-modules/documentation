@@ -1,0 +1,80 @@
+name: doc-sidebar
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [main]
+    paths:
+      - "docs/_sidebar.md"
+  pull_request:
+    branches: [main]
+    paths:
+      - "docs/_sidebar.md"
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  doc-update:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # If this is pull request, check out the head of PR branch so we can make changes to it
+      - name: Checkout Main
+        if: ${{ github.event_name == 'push' }}
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GH_TOKEN }}
+
+      - name: Checkout PR Branch
+        if: ${{ github.event_name == 'pull_request' }}
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GH_TOKEN }}
+          ref: ${{ github.head_ref }}
+
+      - name: setup git config
+        run: |
+          # setup the username and email. I tend to use 'GitHub Actions Bot' with no email by default
+          git config user.name "GitHub Actions Bot"
+          git config user.email "<>"
+          git config push.default current
+
+      - name: Make Changes to README
+        run: |
+          # make temporary copy of sidebar
+          cp docs/_sidebar.md /tmp/_sidebar.md
+
+          # add newline to end of file if needed
+          if ! [[ $(tail -c1 "/tmp/_sidebar.md" | wc -l) -gt 0 ]]
+          then
+            echo "" >> /tmp/_sidebar.md
+          fi
+
+          # prepend URLs with base path
+          # sed logic:
+          # general format: s/selector/replacement/g - "g" will do global replace
+          # selectors separated with parends so that they can be referenced later in replacement 
+          # selector 1 format: "[anything]("  - finds beginning of markdown URL format
+          # selector 2 format: "anything.md)" - the back end of the URL format
+          # replacement format: selector1 + new url domain + selector 2
+          sed -i 's/\(\[.*\](\)\(.*\.md\)/\1https:\/\/terraform-ibm-modules.github.io\/documentation\/#\/\2/g' /tmp/_sidebar.md
+
+          # substitute the temp sidebar content in between markers in readme
+          perl -i -ne 'if (/BEGIN TOC/../END TOC/) { print $_ if /BEGIN TOC/; print "I_WANT_TO_BE_REPLACED\n$_" if /END TOC/;} else { print $_ }' "README.md"
+          perl -i -e 'open(F, "'"/tmp/_sidebar.md"'"); $f = join "", <F>; while(<>){if (/I_WANT_TO_BE_REPLACED/) {print $f} else {print $_};}' "README.md"
+
+      - name: commit
+        run: |
+          # Stage the file, commit and push only if changed
+          if ! git diff --exit-code; then
+            git add README.md
+            git commit -m "Sidebar change [skip ci]"
+            git push
+          fi
