@@ -1,6 +1,6 @@
 # Contributing to the IBM Cloud Terraform modules project
 
-When you create a module, you start from the module template. When you update a module, you create a branch off the dev branch of the module you want to work with. Then, modify the Terraform logic, create examples, and run tests.
+To create a module, you start from the module template. To update a module, you create a branch off the dev branch of the module you want to work with. Then, modify the Terraform logic, create examples, and run tests.
 
 The process to create a module has several goals.
 
