@@ -1,8 +1,8 @@
 Every module must contain at least one example.
 
 - An example is a [root terraform module](https://www.terraform.io/language/modules#the-root-module) that uses the module and demonstrates its usage.
-- Examples are located in the `/examples` directory. See [module structure](module-structure.md).
-- After you add an example, link to it from the Examples section in your root-level readme file. See the [readme](https://github.com/terraform-ibm-modules/terraform-ibm-module-template#examples) file from the module template.
+- Examples are located in the `examples` directory. See [module structure](module-structure.md).
+- The main readme file includes links to your examples that are created by a pre-commit hook that creates the links.
 
 The following recommendations and good practices might help you structure your examples:
 

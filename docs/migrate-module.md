@@ -93,23 +93,13 @@ Copy the following files from the `.github` directory of the terraform-ibm-modul
 1.  Copy the `settings.yml` file.
 1.  Copy the `workflows` directory that contains the GitHub Action workflow
 
-## Make updates to pass the pre-commit checks
-
-1.  Run the pre-commit hooks from the root of the newly cloned repo to identify other changes that you need to make:
-
-    ```bash
-    pre-commit run --all-files
-    ```
-
-1.  Iteratively address all the issues from this check, commit the changes, and run the `pre-commit` command until you have a clean check.
-
 ## Create or update examples
 
 Create or update at least one end-to-end example to test your code changes. You can see the structure in the [examples](https://github.com/terraform-ibm-modules/terraform-ibm-module-template/tree/main/examples) directory of the terraform-ibm-module-template.
 
 ?> **Tip:** You can use the [migration script](https://github.com/terraform-ibm-modules/common-dev-assets/blob/main/repo_migration.sh) in the `common-dev-assets` repo to add the CI code.
 
-1.  Implement (or update) the logic for your module examples by updating the `main.tf`, `outputs.tf`, `provider.tf`, `variables.tf`, and  `version.tf` Terraform files in the `examples/default` directory.
+1.  Implement (or update) the logic for your module examples by updating the `main.tf`, `outputs.tf`, `provider.tf`, `variables.tf`, and `version.tf` Terraform files in the `examples/default` directory.
 1.  Update the `README.md` file in the same examples directory to provide some basic information about what the example does.
 
 [inc-examples](inc-examples.md ':include')
@@ -123,6 +113,16 @@ Validate your Terraform logic by running the examples. Then, update the test scr
     After the examples run, destroy the resources.
 1.  Copy the contents of the [tests](https://github.com/terraform-ibm-modules/terraform-ibm-module-template/tree/main/tests) directory from the terraform-ibm-module-template.
 1.  Update the `pr_test.go` file to run the examples as a unit test. For more information, see [Update the PR tests](contribute-module.md#update-the-pr-tests) in the docs.
+
+## Make updates to pass the pre-commit checks
+
+1.  Run the pre-commit hooks from the root of the newly cloned repo to identify other changes that you need to make:
+
+    ```bash
+    pre-commit run --all-files
+    ```
+
+1.  Iteratively address all the issues from this check, commit the changes, and run the `pre-commit` command until all tests pass. For example, commit changes to the readme file that is updated from the pre-commit hooks.
 
 ## Open an initial pull request
 
