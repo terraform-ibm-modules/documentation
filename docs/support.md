@@ -9,5 +9,3 @@ Follow these guidelines to help the project maintainers to understand your issue
   ?> **Tip**: If you find a closed issue that seems similar to what you're experiencing, link to the closed issue in the body of your issue.
 
 - When you create an issue, feature request, or other idea, use an issue template. The requested information in the template helps us resolve issues faster.
-
-For more information, see [Reporting issues and making requests](https://github.com/terraform-ibm-modules/.github/blob/main/.github/SUPPORT.md) in the IBM Cloud Terraform modules project.
