@@ -15,6 +15,7 @@
     - [Design guidelines](design-guidelines.md)
     - [Module structure](module-structure.md)
     - [Metadata file (index.yml)](module-catalog-metadata.md)
+    - [About module badges](badge-status.md)
     - Governance
 - Troubleshooting
     - [Known issues](issues.md)
