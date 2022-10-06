@@ -1,13 +1,11 @@
 # Report an issue or request a feature
 
-You can report issues and request features for this module in the `terraform-ibm-issue-tracker` repo.
+Use GitHub issues in the module repo to report an issue or request a feature. Or use the [terraform-ibm-issue-tracker](https://github.com/terraform-ibm-modules/terraform-ibm-issue-tracker/issues/new?assignees=&labels=repo-request+%F0%9F%86%95%2Cmodule-onboarding&template=new_repo.yml&title=%5BNew+repo%5D%3A+New+Terraform+module+repo) repo to request a repo for a new module.
 
 Follow these guidelines to help the project maintainers to understand your issue, reproduce the behavior, and find related reports.
 
-- Before you create an issue, check the [terraform-ibm-issue-tracker/issues](https://github.com/terraform-ibm-modules/terraform-ibm-issue-tracker/issues) repo for similar issues.
+- Before you create an issue, check for similar issues.
 
-  ?> **Tip**: If you find a closed issue that seems similar to what you're experiencing, open a new issue and include a link to the original issue in the body of your new one.
+  ?> **Tip**: If you find a closed issue that seems similar to what you're experiencing, link to the closed issue in the body of your issue.
 
-- When you create an issue, feature request, or other idea, use an [issue template](https://github.com/terraform-ibm-modules/terraform-ibm-issue-tracker/issues/new/choose). The information that's requested in the template helps us resolve issues faster.
-
-For more information, see the [readme file](https://github.com/terraform-ibm-modules/terraform-ibm-issue-tracker/blob/main/README.md) in the `terraform-ibm-issue-tracker` repo.
+- When you create an issue, feature request, or other idea, use an issue template. The requested information in the template helps us resolve issues faster.
