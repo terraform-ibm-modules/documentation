@@ -9,12 +9,13 @@ You can see the published documentation at https://terraform-ibm-modules.github.
 ### Table of contents
 <!-- BEGIN TOC -->
 - Getting started
-    - [About IBM Cloud Terraform modules](https://terraform-ibm-modules.github.io/documentation/#/README)
-- Consuming modules (coming)
+    - [About IBM Cloud Terraform modules](https://terraform-ibm-modules.github.io/documentation/#/README.md)
+- Consuming modules
 - Contributing modules
     - [Local development setup](https://terraform-ibm-modules.github.io/documentation/#/local-dev-setup.md)
     - [Regular developer tasks](https://terraform-ibm-modules.github.io/documentation/#/dev-maintenance.md)
     - [Contributing a module](https://terraform-ibm-modules.github.io/documentation/#/contribute-module.md)
+    - [Updating an older module ](https://terraform-ibm-modules.github.io/documentation/#/migrate-module.md)
     - [Validation tests](https://terraform-ibm-modules.github.io/documentation/#/tests.md)
     - [GitHub Actions workflows](https://terraform-ibm-modules.github.io/documentation/#/gh-actions.md)
     - Creating docs for your module (coming)
@@ -24,7 +25,8 @@ You can see the published documentation at https://terraform-ibm-modules.github.
     - [Design guidelines](https://terraform-ibm-modules.github.io/documentation/#/design-guidelines.md)
     - [Module structure](https://terraform-ibm-modules.github.io/documentation/#/module-structure.md)
     - [Metadata file (index.yml)](https://terraform-ibm-modules.github.io/documentation/#/module-catalog-metadata.md)
-    - Governance (coming)
+    - [About module badges](https://terraform-ibm-modules.github.io/documentation/#/badge-status.md)
+    - Governance
 - Troubleshooting
     - [Known issues](https://terraform-ibm-modules.github.io/documentation/#/issues.md)
 - [Report and issue or request a feature](https://terraform-ibm-modules.github.io/documentation/#/support.md)
