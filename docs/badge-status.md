@@ -24,7 +24,7 @@ The following status badges are supported for active modules. The order follows 
   <li>
     <dl>
       <dt><img src="https://img.shields.io/badge/Status-Stable%20(With%20quality%20checks)-green?style=plastic" alt="Stable (With quality checks)"></dt>
-      <dd>The module is reviewed and approved by the project maintainers. Quality checks are run against the code. The module is not yet supported by IBM</dd>
+      <dd>The module is reviewed and approved by the project maintainers. Quality checks are run against the code. The module is supported by the IBM Cloud Terraform modules community.</dd>
       <dd></dd>
     </dl>
   </li>
@@ -40,7 +40,7 @@ The following status badges are supported for active modules. The order follows 
 ### Other statuses
 
 <dl>
-<dt><img src="https://img.shields.io/badge/Status-Inactive-inactive?style=plastic" alt="Inactive"></dt>
+<dt><img src="images/badge-inactive.svg" alt="Inactive"></dt>
 <dd>This module is no longer maintained or is deprecated, and might be archived. Do not use.</dd>
 </dl>
 
@@ -51,6 +51,6 @@ The following status badges are supported for active modules. The order follows 
   <dd>Latest semantic versioning release of the module in GitHub.</dd>
 </dl>
 <dl>
-  <dt><img src="https://img.shields.io/badge/release-IBM%20Cloud%20Catalog-3662FF?logo=ibm-cloud&style=plastic" alt="Catalog release"></dt>
+  <dt><img src="images/badge-release-cloud.svg" alt="Catalog release"></dt>
   <dd>This module is available in the IBM Cloud catalog.</dd>
 </dl>
