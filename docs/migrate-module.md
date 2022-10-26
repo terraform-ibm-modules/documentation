@@ -39,7 +39,7 @@ Clone the repo and configure the submodule.
         Where `<REPO_NAME>` is an existing `terraform-ibm-modules` repo.
 1.  Add the Git submodule.
 
-   ?> **Tip:** You can use the [migration script](https://github.com/terraform-ibm-modules/common-dev-assets/blob/main/repo_migration.sh) in the `common-dev-assets` repo to add the submodule and links.
+    ?> **Tip:** You can use the [migration script](https://github.com/terraform-ibm-modules/common-dev-assets/blob/main/repo_migration.sh) in the `common-dev-assets` repo to add the submodule and links.
 
     ```bash
     git submodule add https://github.com/terraform-ibm-modules/common-dev-assets
@@ -57,6 +57,10 @@ Clone the repo and configure the submodule.
     ln -s common-dev-assets/module-assets/Brewfile Brewfile
     git add Brewfile
     ```
+
+## Update the repo name and description in source control
+
+[inc-name-settings](inc-name-settings.md ':include')
 
 ## Migrate your module code
 
@@ -79,6 +83,7 @@ Bring your Terraform logic from your older repo to the new repo.
         git remote -v
         ```
     1.  Push the module code from the older repo to the main branch of the new repo:
+
         ```bash
         git push origin2 main
         ```
