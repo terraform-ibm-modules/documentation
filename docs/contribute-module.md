@@ -36,6 +36,10 @@ Clone either the repo that you just created or the module repo that you want to 
 
 [inc-make](inc-make.md ':include')
 
+## Update the repo name and description in source control
+
+[inc-name-settings](inc-name-settings.md ':include')
+
 ## Update the Terraform files
 
 1.  From the root of the newly cloned repo, create a branch to work in by running the command `git checkout -b ＜YOUR_TOPIC_BRANCH>`. Replace `＜YOUR_TOPIC_BRANCH>` with your own branch name.
@@ -79,7 +83,7 @@ Run your examples to test the logic. After the examples run, destroy the resourc
     terraform apply
     ```
 
-    Confirm that you want Terraform the apply the changes by typing `yes`. If everything runs successfully, you validated your Terraform logic.
+    Confirm that you want Terraform to apply the changes by typing `yes`. If everything runs successfully, you validated your Terraform logic.
 
 1.  Clean up.
 
@@ -127,7 +131,7 @@ After your PR tests pass, create a pull request.
     git push origin ＜YOUR_TOPIC_BRANCH>
     ```
 
-1.  Open a pull request with a clear title and description. Be sure to merge the latest from upstream before you create the PR.
+1.  Open a pull request with a clear title and description. Be sure to merge the latest changes from upstream before you create the PR.
 
     - Open your PR from your branch to `main`.
     - Start by contributing a draft PR. A draft pull request provides insight about the work that you're doing but cannot be merged. To create a draft pull request, use the drop-down and select **Create Draft Pull Request**, then click **Draft Pull Request**.
