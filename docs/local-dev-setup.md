@@ -6,10 +6,10 @@ Follow these steps to set up your local development environment for working with
 
 ## Before you begin
 
-- On Microsoft Windows, set up Windows Subsystem for Linux [WSL](https://ubuntu.com/wsl) and run commands within WSL.
 - Make sure that you have a current version of Python 3 and pip.
 - Make sure that a recent stable version of [Go is installed](https://go.dev/doc/install) and available in your PATH environment variable.
-- Make sure that [Homebrew](https://brew.sh) is installed
+- On Microsoft Windows, set up Windows Subsystem for Linux [WSL](https://ubuntu.com/wsl) and run commands within WSL.
+- On macOS, make sure that [Homebrew](https://brew.sh) is installed
 
 ## Clone and initialize the repo
 
