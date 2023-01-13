@@ -47,12 +47,11 @@ Modules must contain at least one automated validation test that runs Terraform 
 
 Use [Conventional Commit](https://www.conventionalcommits.org) messages when you commit code.
 
-- Conventional commits determine whether a new version of a module is needed and which semantic versioning number to use. As a module author or contributor, you don't need to release a new version. When a PR is merged into the main branch, a new release is created by the release automation if the validation pipeline passes.
-- The commit messages are published in the release notes for the module.
-- For more information, see this handy [cheat sheet](https://cheatography.com/albelop/cheat-sheets/conventional-commits/).
+Module changes adhere to [semantic versioning](https://semver.org/), with releases labeled as `{major}.{minor}.{patch}`. [Git tags](https://git-scm.com/book/en/v2/Git-Basics-Tagging) are used to identify the module versions. For more information about versioning see [release compatibility](versioning.md).
 
-[Git tags](https://git-scm.com/book/en/v2/Git-Basics-Tagging) are used to identify module versions. Release tags are based [semantic version](https://semver.org/) guidelines. For example, v1.0.0.
+As a module author or contributor, you don't need to release a new version. Conventional commits determine whether a new version of a module is needed and which semantic versioning number to use. When a PR is merged into the main branch, a new release is created by the release automation if the validation pipeline passes. The commit messages are published in the release notes for the module.
 
+For more information about Conventional Commits, see this handy [cheat sheet](https://cheatography.com/albelop/cheat-sheets/conventional-commits/).
 ## Module documentation
 
 Document the module in the readme file at the same level as the `main.tf` file for each of the modules in a repository, including the example modules. Put content that isn't required initially in a `docs` subdirectory. For more information about the title and description, see [Module names and descriptions](#module-names-and-descriptions).

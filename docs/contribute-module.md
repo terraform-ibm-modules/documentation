@@ -111,7 +111,7 @@ For more information about testing modules in this project, see [Tests](tests.md
 
 After your PR tests pass, create a pull request.
 
-!> **Important**: Use [Conventional Commit](https://www.conventionalcommits.org) messages when you commit code. Conventional commits determine whether a new version of a module is needed and which semantic versioning number to use. The commit messages are published in the release notes for the module. For more information, see this handy [cheat sheet](https://cheatography.com/albelop/cheat-sheets/conventional-commits/).
+!> **Important**: Use [Conventional Commit](https://www.conventionalcommits.org) messages when you commit code ([cheat sheet](https://cheatography.com/albelop/cheat-sheets/conventional-commits/)). Conventional commits determine whether a new version of a module is needed and which [semantic versioning number](versioning.md) to use. The commit messages are published in the release notes for the module.
 
 1.  Locally merge (or rebase) the upstream `main` branch into your topic branch:
 
