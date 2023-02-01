@@ -2,7 +2,7 @@
 
 Tests are written in the Go programming language to take advantage of an open source Go library called [Terratest](https://github.com/gruntwork-io/terratest).
 
-The tests also use test helper functions from [ibmcloud-terratest-wrapper](https://github.com/terraform-ibm-modules/ibmcloud-terratest-wrapper).
+The tests also use test helper functions from the [ibmcloud-terratest-wrapper](https://github.com/terraform-ibm-modules/ibmcloud-terratest-wrapper) module. For more information about the functions, see the Go package at [pkg.go.dev](https://pkg.go.dev/github.com/terraform-ibm-modules/ibmcloud-terratest-wrapper).
 
 To test the module, you test the example code in the `examples` folder.
 
@@ -32,6 +32,19 @@ Make sure that you include at least these two tests:
 
   ?> **Tip**: The upgrade test is disabled by default in `pr_test.go` in the module template because you can't run an upgrade test until the initial module code is merged to the main branch. After the initial merge, create a pull request to enable the upgrade test by commenting out the line that starts with `t.Skip`.
 
+- **IBM Cloud Schematics test**
+
+    Use the `testschematic/TestSchematicOptions.RunSchematicTest()` function to execute a test example from within an IBM Cloud Schematics Workspace. The function includes the following things:
+    - Sets up a new transient workspace in your account to execute tests
+    - Builds a configurable .tar file that is uploaded to the workspace
+    - Executes `init`, `apply`, and `destroy` actions for the workspace
+    - Deletes the workspace after a successful test
+    - Supports setting workspace environment variables
+    - Supports Schematics `variablestore` settings for test input variables
+    - Allows `.netrc` settings to support Terraform modules in private GitHub source locations
+
+    For more information, see the [examples](https://pkg.go.dev/github.com/terraform-ibm-modules/ibmcloud-terratest-wrapper/testschematic#pkg-overview) at pkg.go.dev.
+
 ### The other_test.go file
 
 Use the [other_test.go](https://github.com/terraform-ibm-modules/terraform-ibm-module-template/blob/main/tests/other_test.go) file to test end-to-end examples that are not run in `pr_test.go`. The tests in this file don't run in the PR pipeline, but are run in the continuous testing pipeline (internally).
@@ -45,6 +58,12 @@ Use the [other_test.go](https://github.com/terraform-ibm-modules/terraform-ibm-m
 [example-test](inc-example-test.md ':include')
 
 ## Other test customizations
+
+### TestOptions and TestSchematicOptions
+
+You can configure your tests by using the fields in the `TestOptions` and `TestSchematicOptions` objects:
+- [TestOptions](https://pkg.go.dev/github.com/terraform-ibm-modules/ibmcloud-terratest-wrapper/testhelper#TestOptions)
+- [TestSchematicOptions](https://pkg.go.dev/github.com/terraform-ibm-modules/ibmcloud-terratest-wrapper/testschematic#TestSchematicOptions)
 
 ### TestOptionsDefaultWithVars() vs TestOptionsDefault()
 
@@ -66,3 +85,10 @@ Tests can take a long time to run, for example when they provision and then dest
 For example, if a test spins up a Kubernetes cluster and then deploys things to it, you can use `ImplicitDestroy` to remove all the resources that are deployed. The resources are destroyed along with the cluster deletion.
 
 !> **Important** Never pass any resources to `ImplicitDestroy` that are created as part of the module that you are testing. The tests are designed to follow the same flow as a user who runs `terraform destroy`. Use this feature only on supporting resources of the module that are used in the end-to-end test.
+
+### More examples
+
+For more examples of test customization, see the pkg.go.dev repository and the GitHub repo for `ibmcloud-terratest-wrapper`:
+- [Terratest examples](https://pkg.go.dev/github.com/terraform-ibm-modules/ibmcloud-terratest-wrapper/testhelper#pkg-overview)
+- [Schematics Workspace examples](https://pkg.go.dev/github.com/terraform-ibm-modules/ibmcloud-terratest-wrapper/testschematic#pkg-overview)
+- [Usage examples](https://github.com/terraform-ibm-modules/ibmcloud-terratest-wrapper) in the GitHub repo.
