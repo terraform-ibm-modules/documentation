@@ -10,7 +10,7 @@ When changes are merged to the main branch, they are built and published to http
 
 ### Making content changes locally
 
-Fork the repo so you can work locally. You can [preview your changes](/contribute-docs.md#previewing-the-docs-locally) before you create a pull request.
+Fork the repo so you can work locally. You can [preview your changes](contribute-docs.md#previewing-the-docs-locally) before you create a pull request.
 
 1.  Fork the documentation repo.
 1.  Create a working branch from the `main` branch.

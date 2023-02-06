@@ -4,4 +4,4 @@ The IBM Cloud Terraform modules project is a collection of open source Terraform
 
 You can use [Terraform](https://www.terraform.io/) to specify your cloud infrastructure resources and services by using the high-level scripting HashiCorp Configuration Language (HCL).
 
-To get started creating modules. see [Authoring guidelines](implementation-guidelines.md) and [Contributing to the IBM Cloud Terraform modules project](/contribute-module.md).
+To get started creating modules. see [Authoring guidelines](implementation-guidelines.md) and [Contributing to the IBM Cloud Terraform modules project](contribute-module.md).
