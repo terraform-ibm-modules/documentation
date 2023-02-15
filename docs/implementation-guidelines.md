@@ -35,6 +35,15 @@ Include a short description for each input and output variable in the `variables
 
 Include default values where possible and set the sensitive flag as needed. Update the meaning of a type only with agreement of the governance body.
 
+## Reference architecture
+
+If this module is published as a deployable architecture in IBM Cloud, include a reference architecture that describes the design.
+
+- Author the reference architecture in Markdown.
+- Include an architecture diagram.
+- Save the files in the `reference-architectures` directory. See [module structure](module-structure.md).
+- For more information, see the template in the [terraform-ibm-module-template](https://github.com/terraform-ibm-modules/terraform-ibm-module-template/blob/main/reference-architectures/reference-architecture-template.md).
+
 ## Module examples
 
 [inc-examples](inc-examples.md ':include')
@@ -47,7 +56,7 @@ Modules must contain at least one automated validation test that runs Terraform 
 
 Use [Conventional Commit](https://www.conventionalcommits.org) messages when you commit code.
 
-Module changes adhere to [semantic versioning](https://semver.org/), with releases labeled as `{major}.{minor}.{patch}`. [Git tags](https://git-scm.com/book/en/v2/Git-Basics-Tagging) are used to identify the module versions. For more information about versioning see [release compatibility](versioning.md).
+Module changes adhere to [semantic versioning](https://semver.org/), with releases labeled as `{major}.{minor}.{patch}`. [Git tags](https://git-scm.com/book/en/v2/Git-Basics-Tagging) are used to identify the module versions. For more information about versioning, see [release compatibility](versioning.md).
 
 As a module author or contributor, you don't need to release a new version. Conventional commits determine whether a new version of a module is needed and which semantic versioning number to use. When a PR is merged into the main branch, a new release is created by the release automation if the validation pipeline passes. The commit messages are published in the release notes for the module.
 

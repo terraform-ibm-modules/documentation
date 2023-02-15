@@ -27,9 +27,12 @@ The following structure describes the [terraform-ibm-module-template](https://gi
 │   │   ├── outputs.tf
 │   ├── nestedB/
 │   ├── .../
+├── reference-architectures/
+│   ├── architecture-example.md
+│   ├── example-architecture-diagram.svg
 ├── tests/
-│   ├── pr_test.go/
-│   ├── other_test.go/
+│   ├── pr_test.go
+│   ├── other_test.go
 │   ├── .../
 ├── .gitmodules
 ├── .pre-commit-config.yaml
