@@ -40,8 +40,9 @@ Include default values where possible and set the sensitive flag as needed. Upda
 If this module is published as a deployable architecture in IBM Cloud, include a reference architecture that describes the design.
 
 - Author the reference architecture in Markdown.
+- Start from the [Markdown template](https://github.ibm.com/allen-dean/tim-docs/raw/main/docs/templates/reference-architecture-template.md ':target=_blank') to guide you.
 - Include an architecture diagram.
-- Save the files in the `reference-architectures` directory. See [module structure](module-structure.md).
+- Save the files in your module in the `reference-architectures` directory.
 - For more information, see the template in the [terraform-ibm-module-template](https://github.com/terraform-ibm-modules/terraform-ibm-module-template/blob/main/reference-architectures/reference-architecture-template.md).
 
 ## Module examples
