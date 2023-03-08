@@ -10,7 +10,7 @@ lastupdated: "2023-01-30"
 
 keywords:
 
-subcollection: # From your toc.yaml file in IBM Cloud Docs
+subcollection: deployable-reference-architectures
 
 authors:
   - name: "author1"
@@ -32,12 +32,12 @@ docs: https://cloud.ibm.com/docs/solution-guide
 image_source: https://github.com/terraform-ibm-modules/module/reference-architectures/xxx.svg
 
 related_links:
-  - title: 'Title'
-    url: 'https://url.com'
-    description: 'Description.'
-  - title: 'related or follow-on architectures'
-    url: 'https://url'
-    description: 'Description'
+  - title: "Title"
+    url: "https://url.com"
+    description: "Description."
+  - title: "related or follow-on architectures"
+    url: "https://url"
+    description: "Description"
 
 # use-case from 'code' column in
 # https://github.ibm.com/digital/taxonomy/blob/main/subsets/use_cases/use_cases_flat_list.csv
