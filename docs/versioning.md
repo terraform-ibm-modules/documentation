@@ -2,7 +2,7 @@
 
 Modules are updated regularly. The changes adhere to [semantic versioning](https://semver.org/), with releases labeled as `{major}.{minor}.{patch}`. [Git tags](https://git-scm.com/book/en/v2/Git-Basics-Tagging) are used to identify module versions.
 
-Release levels apply to both modules and submodules. For example, a major version change to a submodule results in a major release for the whole module. However, changes to examples do not drive release levels, unless the example is published as a Deployable Architecture to the IBM Cloud.
+Release levels apply to both modules and submodules. For example, a major version change to a submodule results in a major release for the whole module. However, changes to examples do not drive release levels.
 
 ## Determining version updates
 
