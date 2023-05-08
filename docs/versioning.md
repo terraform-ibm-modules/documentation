@@ -12,7 +12,8 @@ No universal criteria exist to determine terraform module versioning. However, w
 
 A major version release is one that impacts the actual infrastructure that is deployed by the module itself. The following are example of major version updates:
 
-- Adding changes that may destroy infrastructure or update resources (that may impact every day operations) that were created in the previous version
+- Adding changes that may make updates to resources that were created in the previous version that may impact every day operations
+- Adding changes that may destroy infrastructure that was created in the previous version
   - Manual steps are documented as GIT release notes with the major version either to avoid ending up in this situation (for example, migrating Terraform state) or to describe a path for business continuity.
 
 ### Minor version changes
@@ -28,8 +29,6 @@ The following examples identify minor version changes:
 As some of the above types of changes could require consuming client developers to update code in order to consume the new minor version, such changes are documented in the versioning GIT release notes
 
 ### Patch version changes
-
-## Where patches are added
 
 Patches are added to the current release, regardless of the version that they are found in. In other words, if a bug is found in release `X.Y.Z` and the current release is `A.B.C`, the patch is delivered in release `A.B.(C+1)`, not in `X.Y.(Z+1)`.
 
