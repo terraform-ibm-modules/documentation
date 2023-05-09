@@ -2,43 +2,48 @@
 
 Modules are updated regularly. The changes adhere to [semantic versioning](https://semver.org/), with releases labeled as `{major}.{minor}.{patch}`. [Git tags](https://git-scm.com/book/en/v2/Git-Basics-Tagging) are used to identify module versions.
 
-Release levels apply to both modules and submodules. For example, a major version change to a submodule results in a major release for the whole module. However, changes to examples do not drive release levels.
+Release labels apply to both modules and submodules. For example, a major version change to a submodule results in a major release for the whole module. However, changes to examples do not drive release levels.
 
-## Determining version updates
+## Major version changes
 
-No universal criteria exist to determine terraform module versioning. However, when we evaluate changes, we consider major version updates only necessary when any of the actual infrastructure that is deployed by the module will either be destroyed or modified in a way that may affect every day operations.
+A major version release affects the infrastructure that is deployed by the module.
 
-### Major version changes
+The following examples identify a major release:
 
-A major version release is one that impacts the actual infrastructure that is deployed by the module itself. The following are example of major version updates:
+- Adding changes that can make updates to resources that are created in the previous version and that might impact day-to-day operations
+- Adding changes that can destroy infrastructure that is created in the previous version
 
-- Adding changes that may make updates to resources that were created in the previous version that may impact every day operations
-- Adding changes that may destroy infrastructure that was created in the previous version
-  - Manual steps are documented as GIT release notes with the major version either to avoid ending up in this situation (for example, migrating Terraform state) or to describe a path for business continuity.
+    The GitHub release notes document either how to avoid destroying infrastructure (for example, by migrating Terraform state) or describe a path that supports business continuity.
 
-### Minor version changes
+## Minor version changes
 
-The following examples identify minor version changes:
-- Adding a new feature
-- Adding, removing or renaming an input or output variable
-- Changing the default value of an input variable (NOTE: This may be a major version change if it impacts already deployed infrastructure)
-- Reducing or expanding possible values for input variables
-- Requiring a new terraform provider
+The following examples identify a minor release:
+
+- Adding a feature.
+- Adding, removing, or renaming an input or output variable
+- Changing the default value of an input variable
+
+    A change to a default value might be considered a major version change if it affects infrastructure that is deployed in the previous version.
+- Adding or removing allowable values to input variables
+- Requiring a new Terraform provider
 - Updating the required provider version constraints
 
-As some of the above types of changes could require consuming client developers to update code in order to consume the new minor version, such changes are documented in the versioning GIT release notes
+If we anticipate that a minor version change is likely to require code changes by consuming developers, we document the changes in the GitHub release notes.
 
-### Patch version changes
+## Patch version changes
 
 Patches are added to the current release, regardless of the version that they are found in. In other words, if a bug is found in release `X.Y.Z` and the current release is `A.B.C`, the patch is delivered in release `A.B.(C+1)`, not in `X.Y.(Z+1)`.
 
-The following examples identify patch version changes:
-- Bug fix
-- Dependency update (unless dependency is exposing a new feature, in which case a minor version release would be done)
+The following examples identify a patch release:
+
+- Bug fixes
+- Dependency updates
+
+    However, if the dependency update exposes a new feature, the release is marked as a minor version.
 
 ## Upgrading
 
-When you upgrade from a version `A` to a version `B`, it is recommended to apply each update between `A` and `B`. Although you might successfully upgrade if you skip patch releases in a minor release, that path is not verified with the automatic tests.
+When you upgrade from a version `A` to a version `B`, apply each update between `A` and `B`. Although you might successfully upgrade if you skip patch releases in a minor release, that path is not verified with the automatic tests.
 
 ## Staying current
 
