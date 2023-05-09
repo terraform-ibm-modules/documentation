@@ -26,7 +26,7 @@ You can see the published documentation at https://terraform-ibm-modules.github.
     - [Module structure](https://terraform-ibm-modules.github.io/documentation/#/module-structure.md)
     - [Metadata file (index.yml)](https://terraform-ibm-modules.github.io/documentation/#/module-catalog-metadata.md)
     - [About module badges](https://terraform-ibm-modules.github.io/documentation/#/badge-status.md)
-    - [Release compatibility](https://terraform-ibm-modules.github.io/documentation/#/versioning.md)
+    - [Release versioning](https://terraform-ibm-modules.github.io/documentation/#/versioning.md)
     - Governance
 - Troubleshooting
     - [Known issues](https://terraform-ibm-modules.github.io/documentation/#/issues.md)
