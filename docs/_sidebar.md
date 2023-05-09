@@ -16,7 +16,7 @@
     - [Module structure](module-structure.md)
     - [Metadata file (index.yml)](module-catalog-metadata.md)
     - [About module badges](badge-status.md)
-    - [Release compatibility](versioning.md)
+    - [Release versioning](versioning.md)
     - Governance
 - Troubleshooting
     - [Known issues](issues.md)
