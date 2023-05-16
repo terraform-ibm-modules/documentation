@@ -24,7 +24,7 @@ You cannot create or update access tags for resources when you create or update 
 
 ### Why it happens
 
-The context-based restriction (CBR) UI in the IBM Cloud console does not support creating or editing rules with tags.
+The CBR UI in the IBM Cloud console does not support creating or editing rules with tags.
 
 ### How do I solve this problem?
 
