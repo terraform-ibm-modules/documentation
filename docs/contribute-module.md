@@ -131,12 +131,19 @@ After your PR tests pass, create a pull request.
     git push origin ＜YOUR_TOPIC_BRANCH>
     ```
 
-1.  Open a pull request with a clear title and description. Be sure to merge the latest changes from upstream before you create the PR.
+1.  Open a pull request:
 
-    - Open your PR from your branch to `main`.
-    - Start by contributing a draft PR. A draft pull request provides insight about the work that you're doing but cannot be merged. To create a draft pull request, use the drop-down and select **Create Draft Pull Request**, then click **Draft Pull Request**.
-        - When you're ready to merge, mark your draft pull request as ready for review. For more information, see [Changing the stage of a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/changing-the-stage-of-a-pull-request).
-    - Make sure that the [GitHub Actions workflows](gh-actions.md) are running successfully over the PR.
+    1.  Start by contributing a draft PR. A draft pull request provides insight about the work that you're doing but cannot be merged. To create a draft pull request, use the drop-down and select **Create Draft Pull Request**, then click **Draft Pull Request**.
+        - Open your PR from your branch to `main`.
+        - Provide a clear title and description. Be sure to merge the latest changes from upstream before you create the PR.
+    1.  When you're ready to merge your code, mark your draft pull request as ready for review. For more information, see [Changing the stage of a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/changing-the-stage-of-a-pull-request).
+    1.  Run the CI pipeline workflow by adding a comment to the PR with the following text:
+
+        ```text
+        /run pipeline
+        ```
+
+        For more information about workflows, see [GitHub Actions workflows](gh-actions.md).
 
 !> **Important** By contributing content, you agree to allow the project owner to license your work under the same license as that used by the project.
 
