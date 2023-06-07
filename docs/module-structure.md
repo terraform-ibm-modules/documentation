@@ -38,7 +38,6 @@ The following structure describes the [terraform-ibm-module-template](https://gi
 ├── .pre-commit-config.yaml
 ├── .release.rc
 ├── .secrets.baseline
-├── Brewfile/ -> symbolic link to common-dev-assets
 ├── LICENSE
 ├── Makefile/ -> symbolic link to common-dev-assets
 ├── README.md
