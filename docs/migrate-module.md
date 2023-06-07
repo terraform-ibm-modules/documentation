@@ -54,8 +54,6 @@ Clone the repo and configure the submodule.
     git add ci
     ln -s common-dev-assets/module-assets/Makefile Makefile
     git add Makefile
-    ln -s common-dev-assets/module-assets/Brewfile Brewfile
-    git add Brewfile
     ```
 
 ## Update the repo name and description in source control
