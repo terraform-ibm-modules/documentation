@@ -15,4 +15,6 @@
         make run-tests-local RUN=TestRunDefaultExample
         ```
 
-If the tests run successfully, you see a `PASS` statement. The tests run the Terraform `init`, `plan`, and `apply` commands, runs a consistency check to make sure that the module is idempotent, and then destroys the resources.
+If the tests run successfully, you see a `PASS` statement. If you see an error, see [How do I address errors when I run tests?](ts-go-cache.md).
+
+The tests run the Terraform `init`, `plan`, and `apply` commands, runs a consistency check to make sure that the module is idempotent, and then destroys the resources.
