@@ -20,6 +20,7 @@
     - Governance
 - Troubleshooting
     - [Known issues](issues.md)
+    - [How do I address errors when I run tests?](ts-go-cache.md)
 - [Report and issue or request a feature](support.md)
 - [Communities](communities.md)
 - [Contributing to the docs](contribute-docs.md)
