@@ -6,7 +6,8 @@ Follow these steps to set up your local development environment for working with
 
 ## Before you begin
 
-- Make sure that you have a current version of Python 3 and pip ([Python installation instructions](python3-mac-installation.md)).
+- Make sure that you have a current version of Python 3 and pip
+  - The out-of-the-box Python (Python 2.x) comes with macOS is not suitable. The installation instructions for the latest Python 3.x version on macOS can be found [here](python3-mac-installation.md).
 - Make sure that a recent stable version of [Go is installed](https://go.dev/doc/install) and available in your PATH environment variable.
 - On Microsoft Windows, set up Windows Subsystem for Linux [WSL](https://ubuntu.com/wsl) and run commands within WSL.
 

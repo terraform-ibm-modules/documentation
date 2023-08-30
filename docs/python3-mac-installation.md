@@ -1,5 +1,7 @@
 # Latest Python3 installation on macOS
 
+The default Python version (Python 2.x) comes with macOS is not supported. Below are the instructions to install latest Python3 on macOS.  
+
 _Note:_ This guide does not cover `homebrew` based Python3 installation.
 
 1. Navigate to the [official Python download page for macOS](https://www.python.org/downloads/macos/).
