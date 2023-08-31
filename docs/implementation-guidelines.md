@@ -55,11 +55,10 @@ Modules must contain at least one automated validation test that runs Terraform 
 
 ## Commit messages and versioning
 
-Use [Conventional Commit](https://www.conventionalcommits.org) messages when you commit code.
-
 Module changes adhere to [semantic versioning](https://semver.org/), with releases labeled as `{major}.{minor}.{patch}`. [Git tags](https://git-scm.com/book/en/v2/Git-Basics-Tagging) are used to identify the module versions. For more information about versioning, see [Release versioning](versioning.md).
 
-As a module author or contributor, you don't need to release a new version. Conventional commits determine whether a new version of a module is needed and which semantic versioning number to use. When a PR is merged into the main branch, a new release is created by the release automation if the validation pipeline passes. The commit messages are published in the release notes for the module.
+As a module author or contributor, you don't need to release a new version. The merging team determines whether a new version of a module is needed and which semantic versioning number to use based on the commits in the PR. When a PR is merged into the main branch, a new release is created by the release automation if the validation pipeline passes. The commit messages are published in the release notes for the module.
+
 
 For more information about Conventional Commits, see this handy [cheat sheet](https://cheatography.com/albelop/cheat-sheets/conventional-commits/).
 ## Module documentation
