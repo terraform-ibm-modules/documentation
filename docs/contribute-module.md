@@ -14,12 +14,12 @@ Follow these steps to create or update a module.
 
 - If you're running Microsoft Windows, set up Windows Subsystem for Linux [WSL](https://ubuntu.com/wsl) and run commands within WSL.
 - Make sure that you have a current version of Python 3 and pip. 
-  - _Notes for the macOS users:_ The out-of-the-box Python (Python 2.x) which comes with macOS is not suitable. The installation instructions for the latest Python 3.x version on macOS can be found [here](python3-mac-installation.md).
+  - To check your installed version, run `python --version`.
 - Make sure that you have a recent stable version of [Go](https://go.dev/doc/install) installed and available in your PATH environment variable.
 
 ## Request a repo
 
-**Tip:** If you're updating an existing module, skip to the next step.
+?> **Tip:** If you're updating an existing module, skip to the next step.
 
 Submit a request for a new module repo in the [terraform-ibm-issue-tracker](https://github.com/terraform-ibm-modules/terraform-ibm-issue-tracker/issues/new/choose) with your idea for a module.
 
