@@ -14,7 +14,7 @@ Follow these steps to create or update a module.
 
 - If you're running Microsoft Windows, set up Windows Subsystem for Linux [WSL](https://ubuntu.com/wsl) and run commands within WSL.
 - Make sure that you have a current version of Python 3 and pip. 
-  - To check your installed version, run `python --version`.
+  - To check your installed version, run `python3 --version`.
 - Make sure that you have a recent stable version of [Go](https://go.dev/doc/install) installed and available in your PATH environment variable.
 
 ## Request a repo
