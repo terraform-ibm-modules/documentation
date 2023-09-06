@@ -53,14 +53,10 @@ If this module is published as a deployable architecture in IBM Cloud, include a
 
 Modules must contain at least one automated validation test that runs Terraform apply and destroy commands, and tests the idempotency of the module. See [Validation tests](tests.md) for details.
 
-## Commit messages and versioning
+## Versioning
 
 Module changes adhere to [semantic versioning](https://semver.org/), with releases labeled as `{major}.{minor}.{patch}`. [Git tags](https://git-scm.com/book/en/v2/Git-Basics-Tagging) are used to identify the module versions. For more information about versioning, see [Release versioning](versioning.md).
 
-As a module author or contributor, you don't need to release a new version. The merging team determines whether a new version of a module is needed and which semantic versioning number to use based on the commits in the PR. When a PR is merged into the main branch, a new release is created by the release automation if the validation pipeline passes. The commit messages are published in the release notes for the module.
-
-
-For more information about Conventional Commits, see this handy [cheat sheet](https://cheatography.com/albelop/cheat-sheets/conventional-commits/).
 ## Module documentation
 
 Document the module in the readme file at the same level as the `main.tf` file for each of the modules in a repository, including the example modules. Put content that isn't required initially in a `docs` subdirectory. For more information about the title and description, see [Module names and descriptions](#module-names-and-descriptions).
