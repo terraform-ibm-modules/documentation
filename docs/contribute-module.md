@@ -14,8 +14,8 @@ Follow these steps to create or update a module.
 
 - If you're running Microsoft Windows, set up Windows Subsystem for Linux [WSL](https://ubuntu.com/wsl) and run commands within WSL.
 - Make sure that you have a current version of Python 3 and pip. 
-  - To check your installed python version, run `python3 --version`.
-  - To check whether "pip" is installed, run `python3 -m pip --version`.
+    - To check your installed python version, run `python3 --version`.
+    - To check whether "pip" is installed, run `python3 -m pip --version`.
 - Make sure that you have a recent stable version of [Go](https://go.dev/doc/install) installed and available in your PATH environment variable.
 
 ## Request a repo
@@ -113,7 +113,7 @@ For more information about testing modules in this project, see [Tests](tests.md
 
 After your PR tests pass, create a pull request.
 
-!> **Important**: Use [Conventional Commit](https://www.conventionalcommits.org) messages when you commit code ([cheat sheet](https://cheatography.com/albelop/cheat-sheets/conventional-commits/)). Conventional commits determine whether a new version of a module is needed and which [semantic versioning number](versioning.md) to use. The commit messages are published in the release notes for the module.
+When the PR is merged, your commit messages might change because the merging team uses the [squash and merge](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/about-pull-request-merges#squash-and-merge-your-pull-request-commits) option to merge PRs. The PR commit message that's included by the merging team determines whether a new version of a module is needed and which [semantic versioning number](versioning.md) to use. The message also is published in the release notes for the module.
 
 1.  Locally merge (or rebase) the upstream `main` branch into your topic branch:
 
