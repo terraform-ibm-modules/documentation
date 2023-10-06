@@ -1,6 +1,5 @@
 - Getting started
     - [About IBM Cloud Terraform modules](README.md)
-- Consuming modules
 - Contributing modules
     - [Local development setup](local-dev-setup.md)
     - [Regular developer tasks](dev-maintenance.md)
@@ -8,8 +7,9 @@
     - [Updating an older module ](migrate-module.md)
     - [Validation tests](tests.md)
     - [GitHub Actions workflows](gh-actions.md)
-    - Creating docs for your module (coming)
 - [Adding your module to IBM Cloud](onboard-ibm-cloud.md)
+- Maintaining the GitHub project
+    - [About merging pull requests](merging.md)
 - Reference
     - [Module authoring guidelines](implementation-guidelines.md)
     - [Design guidelines](design-guidelines.md)
@@ -21,6 +21,6 @@
 - Troubleshooting
     - [Known issues](issues.md)
     - [How do I address errors when I run tests?](ts-go-cache.md)
-- [Report and issue or request a feature](support.md)
-- [Communities](communities.md)
+    - [Report and issue or request a feature](support.md)
+    - [Communities](communities.md)
 - [Contributing to the docs](contribute-docs.md)

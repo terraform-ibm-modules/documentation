@@ -10,7 +10,6 @@ You can see the published documentation at https://terraform-ibm-modules.github.
 <!-- BEGIN TOC -->
 - Getting started
     - [About IBM Cloud Terraform modules](https://terraform-ibm-modules.github.io/documentation/#/README.md)
-- Consuming modules
 - Contributing modules
     - [Local development setup](https://terraform-ibm-modules.github.io/documentation/#/local-dev-setup.md)
     - [Regular developer tasks](https://terraform-ibm-modules.github.io/documentation/#/dev-maintenance.md)
@@ -18,8 +17,9 @@ You can see the published documentation at https://terraform-ibm-modules.github.
     - [Updating an older module ](https://terraform-ibm-modules.github.io/documentation/#/migrate-module.md)
     - [Validation tests](https://terraform-ibm-modules.github.io/documentation/#/tests.md)
     - [GitHub Actions workflows](https://terraform-ibm-modules.github.io/documentation/#/gh-actions.md)
-    - Creating docs for your module (coming)
 - [Adding your module to IBM Cloud](https://terraform-ibm-modules.github.io/documentation/#/onboard-ibm-cloud.md)
+- Maintaining the GitHub project
+    - [About merging pull requests](https://terraform-ibm-modules.github.io/documentation/#/merging.md)
 - Reference
     - [Module authoring guidelines](https://terraform-ibm-modules.github.io/documentation/#/implementation-guidelines.md)
     - [Design guidelines](https://terraform-ibm-modules.github.io/documentation/#/design-guidelines.md)
@@ -31,8 +31,8 @@ You can see the published documentation at https://terraform-ibm-modules.github.
 - Troubleshooting
     - [Known issues](https://terraform-ibm-modules.github.io/documentation/#/issues.md)
     - [How do I address errors when I run tests?](https://terraform-ibm-modules.github.io/documentation/#/ts-go-cache.md)
-- [Report and issue or request a feature](https://terraform-ibm-modules.github.io/documentation/#/support.md)
-- [Communities](https://terraform-ibm-modules.github.io/documentation/#/communities.md)
+    - [Report and issue or request a feature](https://terraform-ibm-modules.github.io/documentation/#/support.md)
+    - [Communities](https://terraform-ibm-modules.github.io/documentation/#/communities.md)
 - [Contributing to the docs](https://terraform-ibm-modules.github.io/documentation/#/contribute-docs.md)
 <!-- END TOC -->
 
