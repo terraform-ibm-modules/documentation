@@ -1,6 +1,6 @@
-# Updating an older module
+# Porting an older module
 
-Modules in the IBM Terraform modules project need specific logic and workflows to pass the continuous integration (CI) tests and to publish the modules to the IBM Cloud catalog. To update a Terraform repo to these requirements and add it to the terraform-ibm-modules GitHub project, follow these steps.
+Modules in the IBM Terraform modules project need specific logic and workflows to pass the continuous integration (CI) tests and to publish the modules to the IBM Cloud catalog. To port a Terraform repo to these requirements and add it to the terraform-ibm-modules GitHub project, follow these steps.
 
 For more information about how new modules are organized, see [module structure](module-structure.md).
 

@@ -6,11 +6,7 @@ Follow these steps to set up your local development environment for working with
 
 ## Before you begin
 
-- Make sure that you have a current version of Python 3 and pip
-  - To check your installed python version, run `python3 --version`.
-  - To check whether "pip" is installed, run `python3 -m pip --version`.
-- Make sure that a recent stable version of [Go is installed](https://go.dev/doc/install) and available in your PATH environment variable.
-- On Microsoft Windows, set up Windows Subsystem for Linux [WSL](https://ubuntu.com/wsl) and run commands within WSL.
+[inc-prereqs-dev.md](inc-prereqs-dev.md ':include')
 
 ## Clone and initialize the repo
 
