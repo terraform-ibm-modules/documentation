@@ -43,7 +43,7 @@ If this module is published as a deployable architecture in IBM Cloud, include a
 - Start from the [Markdown template](https://github.ibm.com/allen-dean/tim-docs/raw/main/docs/templates/reference-architecture-template.md ':target=_blank') to guide you.
 - Include an architecture diagram.
 - Save the files in your module in the `reference-architectures` directory.
-- For more information, see the template in the [terraform-ibm-module-template](https://github.com/terraform-ibm-modules/terraform-ibm-module-template/blob/main/reference-architectures/reference-architecture-template.md).
+- For more information, see the template in the [documentation](https://github.com/terraform-ibm-modules/documentation/blob/main/docs/templates/reference-architecture-template.md) repo.
 
 ## Module examples
 
