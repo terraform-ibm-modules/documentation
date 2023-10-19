@@ -13,8 +13,7 @@ You can see the published documentation at https://terraform-ibm-modules.github.
 - Contributing modules
     - [Local development setup](https://terraform-ibm-modules.github.io/documentation/#/local-dev-setup.md)
     - [Regular developer tasks](https://terraform-ibm-modules.github.io/documentation/#/dev-maintenance.md)
-    - [Contributing a module](https://terraform-ibm-modules.github.io/documentation/#/contribute-module.md)
-    - [Updating a module](https://terraform-ibm-modules.github.io/documentation/#/update-module.md)
+    - [Contributing modules](https://terraform-ibm-modules.github.io/documentation/#/contribute-module.md)
     - [Porting an older module ](https://terraform-ibm-modules.github.io/documentation/#/migrate-module.md)
     - [Validation tests](https://terraform-ibm-modules.github.io/documentation/#/tests.md)
     - [GitHub Actions workflows](https://terraform-ibm-modules.github.io/documentation/#/gh-actions.md)
