@@ -1,6 +1,6 @@
 # Local development setup
 
-Follow these steps to set up your local development environment for working with the `terraform-ibm-modules` project.
+Follow these steps to set up your local development environment for working with the `terraform-ibm-modules` project. See [Contributing to the IBM Cloud Terraform modules project](contribute-module.md) for detailed steps about how to create or update a module.
 
 ?> **Tip**: For regular maintenance tasks, see [Regular developer tasks](dev-maintenance.md).
 
@@ -8,9 +8,9 @@ Follow these steps to set up your local development environment for working with
 
 [inc-prereqs-dev.md](inc-prereqs-dev.md ':include')
 
-## Clone and initialize the repo
+## Fork, clone, and initialize the repo
 
-[inc-clone](inc-clone.md ':include')
+[inc-fork](inc-fork.md ':include')
 
 ## Add the dependencies
 

@@ -1,6 +1,6 @@
 # Contributing to the IBM Cloud Terraform modules project
 
-To create a module, you start from the module template. Then, modify the Terraform logic, create examples, and run tests.
+To create a module, you request a repo, and then fork the repo. To update a module, you fork the repo that you want to work with. Then you modify the Terraform logic, create examples, and run tests.
 
 The process to create a module has several goals.
 
@@ -10,15 +10,15 @@ The process to create a module has several goals.
 
 ## Overall process
 
-Follow these steps to create a module.
+Follow these steps to contribute or update a module.
 
-1.  Set up your development environment.
-1.  Request a new repo and clone it locally.
-1.  Make your changes.
-1.  Test your changes with example code and tests.
-1.  Open a pull request.
-
-?> **Tip:** If you're updating an existing module, see [Updating a module](/update-module.md).
+1.  Make sure that you [satisfy the prerequisites](#before-you-begin)
+1.  New repo: [Request a repo](#request-a-repo).
+1.  [Fork and clone the repo](#fork-clone-and-initialize-the-repo).
+1.  [Add the dependencies](#add-the-dependencies) in the repo.
+1.  [Make your code changes](#update-the-terraform-files).
+1.  [Test your changes](#create-or-update-examples) with example code and tests.
+1.  [Open a pull request](#push-your-code-and-submit-for-review).
 
 ## Before you begin
 
@@ -26,17 +26,19 @@ Follow these steps to create a module.
 
 ## Request a repo
 
+?> **Tip:** If you're updating an existing module, skip to the next step.
+
 Submit a request for a new module repo in the [terraform-ibm-issue-tracker](https://github.com/terraform-ibm-modules/terraform-ibm-issue-tracker/issues/new/choose) with your idea for a module.
 
 [inc-module-name-desc](inc-module-name-desc.md ':include')
 
 When your repo is created, return to this topic and continue the steps.
 
-## Clone and initialize the repo
+## Fork, clone, and initialize the repo
 
-Clone either the repo that you just created.
+Fork either the repo that was just created or the module repo that you want to update.
 
-[inc-clone.md](inc-clone.md ':include')
+[inc-fork.md](inc-fork.md ':include')
 
 ## Add the dependencies
 
@@ -56,6 +58,8 @@ Create or update at least one end-to-end example to test your code changes.
 1.  Implement (or update) the logic for your module examples by updating the `main.tf`, `version.tf`, `variables.tf`, and `version.tf` Terraform files in the `examples/default` directory.
 1.  Update the `README.md` file in the same examples directory to provide some basic information about what the example does.
 
+### About end-to-end examples
+
 [inc-examples](inc-examples.md ':include')
 
 ## Run examples and clean up
@@ -74,7 +78,7 @@ Now that you tested the module by running your examples directly, update the `pr
 
 For more information about testing modules in this project, see [Tests](tests.md).
 
-## Commit your code and submit for review
+## Push your code and submit for review
 
 After your PR tests pass, create a pull request.
 
@@ -106,6 +110,6 @@ When the PR is merged, your commit messages might change because the merging tea
 
 After the initial merge of a new repo, enable the upgrade test in `tests/pr_test.go`.
 
-When you create a repo from the module template, the upgrade test is disabled by default. You can't run an upgrade test until the initial module code is merged to the main branch.
+When a module is created for you from the module template, the upgrade test is disabled by default. That's because you can't run an upgrade test until the initial module code is merged to the main branch.
 
-Create a pull request to enable the upgrade test in `pr_test.go` by commenting out the line that starts with `t.Skip`.
+1.  Create a pull request to enable the upgrade test in `pr_test.go` by commenting out the line that starts with `t.Skip`.
