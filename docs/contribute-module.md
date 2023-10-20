@@ -91,14 +91,16 @@ After your PR tests pass, create a pull request.
 1.  Open a pull request:
 
     1.  Start by contributing a draft PR. A draft pull request provides insight about the work that you're doing but cannot be merged. To create a draft pull request, use the drop-down and select **Create Draft Pull Request**, then click **Draft Pull Request**.
-        - Open your PR from your branch to `main`.
+        - Open your PR from your working branch to `main`.
         - Provide a clear title and description. Be sure to merge the latest changes from upstream before you create the PR.
     1.  When you're ready to merge your code, mark your draft pull request as ready for review. For more information, see [Changing the stage of a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/changing-the-stage-of-a-pull-request).
-    1.  Run the CI pipeline workflow by adding a comment to the PR with the following text:
+    1.  If you are in the `github-collaborators` team, you can run CI pipeline workflow by adding a comment to the pull request with the following text:
 
         ```text
         /run pipeline
         ```
+
+      ?> **Retriction:** If the CI pipeline workflow doesn't run when you post the comment, you don't have access to run the pipeline. The merging team will run the workflow for you.
 
         For more information about workflows, see [GitHub Actions workflows](gh-actions.md).
 
