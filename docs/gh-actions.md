@@ -9,7 +9,7 @@ The following reusable workflows are included in the [terraform-ibm-module-templ
     - Called from `/.github/workflows/ci.yml`.
     - If you are in the `github-collaborators` team, you can run this workflow by adding a comment to the pull request with the following text:
 
-        ```
+        ```text
         /run pipeline
         ```
 
