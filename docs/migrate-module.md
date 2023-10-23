@@ -53,7 +53,7 @@ Clone the repo and configure the submodule.
         git remote add upstream git@github.com:terraform-ibm-modules/<REPO_NAME>.git
         ```
 
-    For more information, see [Configuring a remote repository for a fork](https://docs.github.com/pull-requests/collaborating-with-pull-requests/working-with-forks/configuring-a-remote-repository-for-a-fork?platform=mac).
+    For more information, see [Configuring a remote repository for a fork](https://docs.github.com/pull-requests/collaborating-with-pull-requests/working-with-forks/configuring-a-remote-repository-for-a-fork).
 1.  Add the Git submodule.
 
     ?> **Tip:** You can use the [migration script](https://github.com/terraform-ibm-modules/common-dev-assets/blob/main/repo_migration.sh) in the `common-dev-assets` repo to add the submodule and links.
