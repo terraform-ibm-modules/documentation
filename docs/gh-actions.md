@@ -16,3 +16,5 @@ The following reusable workflows are included in the [terraform-ibm-module-templ
 - `common-release` for semantic release version tagging. The workflow is run after the CI pipeline successful completes on the main branch.
 
     Called from `/.github/workflows/release.yml`.
+
+*NOTE:* Pipelines do not run on private repos as the org secrets are not available when using the free GitHub actions plan. See free account limitations here https://github.com/pricing#compare-features
