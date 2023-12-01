@@ -17,4 +17,4 @@ The following reusable workflows are included in the [terraform-ibm-module-templ
 
     Called from `/.github/workflows/release.yml`.
 
-*NOTE:* Pipelines do not run on private repos as the org secrets are not available when using the free GitHub actions plan. See free account limitations here https://github.com/pricing#compare-features
+!> **Important**: Pipelines do not run on private repos because the org secrets are not available with the free GitHub actions plan. For more information about features by GitHub plan, see [Compare features](https://github.com/pricing#compare-features).
