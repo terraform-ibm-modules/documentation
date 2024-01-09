@@ -1,11 +1,14 @@
-# Contributing to the IBM Cloud Terraform modules project
+# Contributing to the IBM Cloud Terraform modules project for maintainers
 
-To create a module, you request a repo, and then fork the repo. To update a module, you fork the repo that you want to work with. Then you modify the Terraform logic, create examples, and run tests.
+Maintainers of the IBM Cloud Terraform modules project are responsible for creating and maintaining modules. This topic describes how to create a new module or update an existing module. 
+When maintaining a module the is a high level of responsibility to ensure that the module is of high quality and that the module is maintained in a timely manner.
+To create a new module, you request a repo, and then fork the repo. To update a module, you fork the repo that you want to work with. Then you modify the Terraform logic then create examples, and run tests.
 
 The process to create a module has several goals.
 
 - To maintain the quality of IBM Cloud Terraform modules.
 - To fix problems that are important to users.
+- To add features/functionality that are important to users.
 - To engage the community in working toward the best Terraform modules for IBM Cloud.
 
 ## Overall process
