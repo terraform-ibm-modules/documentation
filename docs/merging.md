@@ -1,6 +1,6 @@
 # About merging pull requests
 
-Members of certain teams can merge pull requests in the IBM Cloud Terraform modules project. Mergers follow a set of guidelines so that the releases are consistent and release notes are useful.
+Members of certain teams can merge pull requests in the IBM Cloud Terraform modules project. Maintainers follow a set of guidelines so that the releases are consistent and release notes are useful.
 
 ## Who can merge a pull request?
 

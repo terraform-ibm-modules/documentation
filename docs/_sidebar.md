@@ -9,6 +9,7 @@
     - [GitHub Actions workflows](gh-actions.md)
 - [Adding your module to IBM Cloud](onboard-ibm-cloud.md)
 - Maintaining the GitHub project
+    - [Maintainers contribution process](maintain-module.md)
     - [About merging pull requests](merging.md)
 - Reference
     - [Module authoring guidelines](implementation-guidelines.md)

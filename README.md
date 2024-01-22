@@ -19,6 +19,7 @@ You can see the published documentation at https://terraform-ibm-modules.github.
     - [GitHub Actions workflows](https://terraform-ibm-modules.github.io/documentation/#/gh-actions.md)
 - [Adding your module to IBM Cloud](https://terraform-ibm-modules.github.io/documentation/#/onboard-ibm-cloud.md)
 - Maintaining the GitHub project
+    - [Maintainers contribution process](https://terraform-ibm-modules.github.io/documentation/#/maintain-module.md)
     - [About merging pull requests](https://terraform-ibm-modules.github.io/documentation/#/merging.md)
 - Reference
     - [Module authoring guidelines](https://terraform-ibm-modules.github.io/documentation/#/implementation-guidelines.md)
