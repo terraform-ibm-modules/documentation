@@ -65,8 +65,8 @@ After your PR tests pass, create a pull request.
 
 When you're ready to merge your code, request a review. Your PR is reviewed by the module maintainers and the community.
 
-1.  Add a `Ready for review` comment to the PR. The comment triggers automation that adds the `ready-for-review` label to your PR.
 1.  Mark your draft pull request as ready for review. For more information, see [Changing the stage of a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/changing-the-stage-of-a-pull-request).
+1.  Add a `Ready for review` comment to the PR. The comment triggers automation that adds the `ready-for-review` label to your PR.
 
 When the maintainers start a review, they add the `acknowledged` label to the PR. The maintainers review the code and provide feedback. They work with you to get the code ready to merge by setting up tests and ensuring that the pipeline passes. After the pipeline passes and the code is approved by the maintainers, the PR is merged into the main branch.
 
