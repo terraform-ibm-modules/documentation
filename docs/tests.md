@@ -27,7 +27,7 @@ Make sure that you include at least these two tests:
 
     Use the `RunTestUpgrade()` test helper to help determine compatibility with earlier module versions.
 
-  ?> **Tip**: If you're working on the first PR for a module, skip the upgrade in `pr_test.go` because you can't run an upgrade test until the initial module code is merged to the main branch. To skip the test, include `SKIP UPGRADE TEST` in the commit message. Include information about why you're skipping the test.
+  ?> **Tip**: If you're working on the first PR for a module, skip the upgrade in `pr_test.go` because you can't run an upgrade test until the initial module code is merged to the main branch. To skip the test, include `SKIP UPGRADE TEST` in the commit message. Include information about why you're skipping the test. If you realise that you no longer want to skip the upgrade test in the PR, comment `UNSKIP UPGRADE TEST` in the commit message.
 
 - **IBM Cloud Schematics test**
 
