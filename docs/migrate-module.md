@@ -128,7 +128,7 @@ Create or update at least one end-to-end example to test your code changes. You 
 
 Validate your Terraform logic by running the examples. Then, update the test scripts to run the examples with pull requests.
 
-1.  Run your examples to test the logic. For more information, see [run examples and clean up](contribute-module.md#run-examples-and-clean-up) in the docs.
+1.  Run your examples to test the logic. For more information, see [run examples and clean up](maintain-module.md#run-examples-and-clean-up) in the docs.
 
     After the examples run, destroy the resources.
 1.  Copy the contents of the [tests](https://github.com/terraform-ibm-modules/terraform-ibm-module-template/tree/main/tests) directory from the terraform-ibm-module-template.
