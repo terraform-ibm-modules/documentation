@@ -38,6 +38,7 @@ The following examples identify a patch release:
 
 - Bug fixes
 - Dependency updates
+- Updates to readme files of modules or submodules when those modules are published to the Hashicorp Terraform Registry. The registry displays the readme file for the version.
 
     However, if the dependency update exposes a new feature, the release is marked as a minor version.
 
