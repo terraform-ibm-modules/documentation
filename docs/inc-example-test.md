@@ -9,11 +9,17 @@
         make run-tests-local
         ```
 
-    - To run a specific test or tests, use the `RUN` variable to pass a regular expression that matches the names of the tests that you want to run:
-
-        ```bash
-        make run-tests-local RUN=TestRunDefaultExample
-        ```
+    - To run a specific test or tests, use the `RUN` variable to pass a regular expression that matches the names of the tests that you want to run. If you want to match a test name exactly, enclose it with ^ at the start and $ at the end.
+  
+      Example 1: This will match any test with "TestRunDefaultExample" in its name, so it may also run tests like "TestRunDefaultExampleWithFlavor".
+      ```bash
+      make run-tests-local RUN=TestRunDefaultExample
+      ```
+  
+      Example 2: This will only run "TestRunDefaultExample" and exclude any similarly named tests.
+      ```bash
+      make run-tests-local RUN="^TestRunDefaultExample$"
+      ```
 
 If the tests run successfully, you see a `PASS` statement. If you see an error, see [How do I address errors when I run tests?](ts-go-cache.md).
 
