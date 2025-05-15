@@ -21,10 +21,9 @@ You can see the published documentation at https://terraform-ibm-modules.github.
 - Maintaining the GitHub project
     - [Maintainers contribution process](https://terraform-ibm-modules.github.io/documentation/#/maintain-module.md)
     - [About merging pull requests](https://terraform-ibm-modules.github.io/documentation/#/merging.md)
-- Deployable Architecture Reference Docs
-    - [Prefix Usage Guide](https://terraform-ibm-modules.github.io/documentation/#/DA-prefix.md)
 - Reference
     - [Module authoring guidelines](https://terraform-ibm-modules.github.io/documentation/#/implementation-guidelines.md)
+    - [Deployable Architecture authoring guidelines](https://terraform-ibm-modules.github.io/documentation/#/da-implementation-guidelines.md)
     - [Design guidelines](https://terraform-ibm-modules.github.io/documentation/#/design-guidelines.md)
     - [Module structure](https://terraform-ibm-modules.github.io/documentation/#/module-structure.md)
     - [Metadata file (index.yml)](https://terraform-ibm-modules.github.io/documentation/#/module-catalog-metadata.md)

@@ -13,6 +13,7 @@
     - [About merging pull requests](merging.md)
 - Reference
     - [Module authoring guidelines](implementation-guidelines.md)
+    - [Deployable Architecture authoring guidelines](da-implementation-guidelines.md)
     - [Design guidelines](design-guidelines.md)
     - [Module structure](module-structure.md)
     - [Metadata file (index.yml)](module-catalog-metadata.md)
