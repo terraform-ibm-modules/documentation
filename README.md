@@ -23,14 +23,14 @@ You can see the published documentation at https://terraform-ibm-modules.github.
     - [About merging pull requests](https://terraform-ibm-modules.github.io/documentation/#/merging.md)
 - Reference
     - [Module authoring guidelines](https://terraform-ibm-modules.github.io/documentation/#/implementation-guidelines.md)
-    - [Deployable Architecture authoring guidelines](https://terraform-ibm-modules.github.io/documentation/#/da-implementation-guidelines.md)
+    - [DA authoring guidelines](https://terraform-ibm-modules.github.io/documentation/#/da-implementation-guidelines.md)
     - [Design guidelines](https://terraform-ibm-modules.github.io/documentation/#/design-guidelines.md)
     - [Module structure](https://terraform-ibm-modules.github.io/documentation/#/module-structure.md)
     - [Metadata file (index.yml)](https://terraform-ibm-modules.github.io/documentation/#/module-catalog-metadata.md)
     - [About module badges](https://terraform-ibm-modules.github.io/documentation/#/badge-status.md)
     - [Release versioning](https://terraform-ibm-modules.github.io/documentation/#/versioning.md)
     - Governance
-- Deployable Architecture consumer tips
+- DA consumer tips
     - [Prefix](https://terraform-ibm-modules.github.io/documentation/#/prefix.md)
 - Troubleshooting
     - [Known issues](https://terraform-ibm-modules.github.io/documentation/#/issues.md)
