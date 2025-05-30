@@ -13,13 +13,15 @@
     - [About merging pull requests](merging.md)
 - Reference
     - [Module authoring guidelines](implementation-guidelines.md)
-    - [Deployable Architecture authoring guidelines](da-implementation-guidelines.md)
+    - [DA authoring guidelines](da-implementation-guidelines.md)
     - [Design guidelines](design-guidelines.md)
     - [Module structure](module-structure.md)
     - [Metadata file (index.yml)](module-catalog-metadata.md)
     - [About module badges](badge-status.md)
     - [Release versioning](versioning.md)
     - Governance
+- DA consumer tips
+    - [Prefix](prefix.md)
 - Troubleshooting
     - [Known issues](issues.md)
     - [How do I address errors when I run tests?](ts-go-cache.md)
