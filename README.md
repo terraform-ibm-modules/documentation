@@ -32,6 +32,7 @@ You can see the published documentation at https://terraform-ibm-modules.github.
     - Governance
 - DA consumer tips
     - [Prefix](https://terraform-ibm-modules.github.io/documentation/#/prefix.md)
+    - [Region](https://terraform-ibm-modules.github.io/documentation/#/region.md)
 - Troubleshooting
     - [Known issues](https://terraform-ibm-modules.github.io/documentation/#/issues.md)
     - [How do I address errors when I run tests?](https://terraform-ibm-modules.github.io/documentation/#/ts-go-cache.md)
