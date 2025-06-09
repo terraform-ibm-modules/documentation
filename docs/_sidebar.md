@@ -22,6 +22,7 @@
     - Governance
 - DA consumer tips
     - [Prefix](prefix.md)
+    - [Region](region.md)
 - Troubleshooting
     - [Known issues](issues.md)
     - [How do I address errors when I run tests?](ts-go-cache.md)
