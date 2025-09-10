@@ -58,3 +58,31 @@ variable "prefix" {
   }
 }
 ```
+### UI Regex Validation
+
+
+The UI supports input validation for string fields using the `value_constraints` field in the catalog . This allows you to define validation rules directly in the catalog, which the UI will use to check user input.
+
+---
+ Field: `value_constraints`
+
+- Only applies to inputs where `"type": "string"`
+- Currently, only **regex** (regular expression) is supported
+- It is defined as an array for extensibility, but only one constraint is currently processed.
+
+---
+
+### Example
+
+```json
+{
+  "key": "prefix",
+  "type": "string",
+  "value_constraints": [
+    {
+      "type": "regex",
+      "description": "Prefix must begin with a lowercase letter and may contain only lowercase letters, digits, and hyphens '-'. It must not end with a hyphen ('-'), and cannot contain consecutive hyphens ('--'). It should not exceed 16 characters.",
+      "value": "^$|^__NULL__$|^[a-z](?!.*--)(?:[a-z0-9-]{0,14}[a-z0-9])?$"
+    }
+  ]
+}
