@@ -26,7 +26,6 @@ All Deployable Architecture solutions should have an optional **`prefix`** input
     nullable    = false
   }
   ```
-
 ### Code snippet example
 The following code should be used consistently across all DAs (tweak the example value that is included in the description so it is relevant to the DA being created):
 
@@ -58,23 +57,11 @@ variable "prefix" {
   }
 }
 ```
-### UI Regex Validation
+- The UI supports input validation for string fields using the `value_constraints` field in the `ibm_catalog.json` . This allows you to define validation rules directly in the catalog, which the UI will use to check user input.
 
+### Code snippet example for UI validation
 
-The UI supports input validation for string fields using the `value_constraints` field in the catalog . This allows you to define validation rules directly in the catalog, which the UI will use to check user input.
-
----
- Field: `value_constraints`
-
-- Only applies to inputs where `"type": "string"`
-- Currently, only **regex** (regular expression) is supported
-- It is defined as an array for extensibility, but only one constraint is currently processed.
-
----
-
-### Example
-
-```json
+```
 {
   "key": "prefix",
   "type": "string",
@@ -86,3 +73,4 @@ The UI supports input validation for string fields using the `value_constraints`
     }
   ]
 }
+```
