@@ -8,7 +8,7 @@ Below you will find some guidance on best practises that should be used when aut
 
 All Deployable Architecture solutions should have an optional **`prefix`** input variable that complies with the following criteria:
 - Input should have no default value in terraform, but set `nullable = true` to allow user to pass `null` incase they do not wish to use a prefix. This would be for advanced users who may need full control over resource naming.
-- There should be a default value added to the input in the ibm_catalog.json. The default should be "dev" but it should use the `random_string` functionality to add 4 random characters to it (see below code snippet).
+- There should be a default value added to the input in the ibm_catalog.json. The default should be "dev" but it should use the `random_string` functionality to add 4 random characters to it (see below code snippet). The input should be marked as `"required": true` in the ibm_cataog.json so it appears in the required tab in projects and allows consumers to see the random string that is going to be added.
 - Add validation to the variable. Validation should be added in both the terraform code and the ibm_catalog.json. See the below code snippets for the recommended validation to be added across all DAs. Ideally all DAs should have the same validation so the `prefix` value is accepted for all DAs for the case where it may be used for input mapping when configuring dependant (add-on) DAs.
 - Ensure to include the details of the required format in the variable description, an example value, and link to the helper doc just like what is shown in the code snippet below. This should be consistent across all DAs.
 - The prefix variable logic should be handled in a local variable so logic does not have repeated in the terraform code. For example:
@@ -66,6 +66,7 @@ variable "prefix" {
 ```json
 {
   "key": "prefix",
+  "required": true,
   "default_value": "dev",
   "random_string": {
     "length": 4
