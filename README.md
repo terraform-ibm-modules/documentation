@@ -17,7 +17,7 @@ You can see the published documentation at https://terraform-ibm-modules.github.
     - [Porting an older module ](https://terraform-ibm-modules.github.io/documentation/#/migrate-module.md)
     - [Validation tests](https://terraform-ibm-modules.github.io/documentation/#/tests.md)
     - [GitHub Actions workflows](https://terraform-ibm-modules.github.io/documentation/#/gh-actions.md)
-    - [Pulumi and IBMCloud](pulumi.md)
+    - [Pulumi and IBMCloud](https://terraform-ibm-modules.github.io/documentation/#/pulumi.md)
 - [Adding your module to IBM Cloud](https://terraform-ibm-modules.github.io/documentation/#/onboard-ibm-cloud.md)
 - Maintaining the GitHub project
     - [Maintainers contribution process](https://terraform-ibm-modules.github.io/documentation/#/maintain-module.md)
