@@ -238,34 +238,33 @@ import pulumi
 import pulumi_ibm as ibm
 
 config = pulumi.Config()
-region = config.require("region")
-resource_group = config.get("resource-group") or "default"
+resource_group = config.get("resource-group") or "Default"
 
 # Create a Cloud Object Storage instance
-cos_instance = ibm.resource.Instance(
+cos_instance = ibm.ResourceInstance(
     "my-cos-instance",
     name="my-dev-cos-instance",
     service="cloud-object-storage",
     plan="lite",
     location="global",
-    resource_group_name=resource_group,
+    resource_group_id=resource_group,
     tags=["environment:dev", "managed-by:pulumi"]
 )
 
-# Create a bucket in the COS instance
-cos_bucket = ibm.cos.Bucket(
+# Create a COS bucket
+cos_bucket = ibm.CosBucket(
     "my-bucket",
     bucket_name="my-unique-bucket-name",
     resource_instance_id=cos_instance.id,
-    region=region,
+    region_location="us-south",
     storage_class="standard",
     endpoint_type="public"
 )
 
-# Export the bucket details
+# Output the details
 pulumi.export("bucket_name", cos_bucket.bucket_name)
-pulumi.export("bucket_region", cos_bucket.region)
 pulumi.export("cos_instance_id", cos_instance.id)
+
 ```
 
 </details>
@@ -279,93 +278,82 @@ import pulumi
 import pulumi_ibm as ibm
 
 config = pulumi.Config()
-region = config.require("region")
 
 # Create a VPC
-vpc = ibm.is.Vpc(
+vpc = ibm.IsVpc(
     "my-vpc",
     name="my-development-vpc",
     resource_group=config.get("resource-group"),
     tags=["environment:dev"]
 )
 
+# Create an address prefix
+vpc_address_prefix = ibm.IsVpcAddressPrefix(
+    "my-address-prefix",
+    cidr="10.0.1.0/24",
+    vpc=vpc.is_vpc_id,
+    zone="us-south-1"
+)
+
 # Create a subnet
-subnet = ibm.is.Subnet(
+vpc_subnet = ibm.IsSubnet(
     "my-subnet",
-    name="my-subnet",
-    vpc=vpc.id,
-    zone=f"{region}-1",
-    ipv4_cidr_block="10.240.0.0/24",
-    tags=["environment:dev"]
+    ipv4_cidr_block="10.0.1.0/24",
+    vpc=vpc.is_vpc_id,
+    zone="us-south-1",
+    opts = pulumi.ResourceOptions(
+        depends_on=[vpc_address_prefix]
+    )
 )
 
 # Create a security group
-security_group = ibm.is.SecurityGroup(
-    "my-security-group",
-    name="my-security-group",
-    vpc=vpc.id,
-    rules=[
-        ibm.is.SecurityGroupRuleArgs(
-            direction="inbound",
-            ip_version="ipv4",
-            protocol="tcp",
-            port_min=22,
-            port_max=22,
-            remote="0.0.0.0/0"
-        ),
-        ibm.is.SecurityGroupRuleArgs(
-            direction="inbound",
-            ip_version="ipv4",
-            protocol="tcp",
-            port_min=80,
-            port_max=80,
-            remote="0.0.0.0/0"
-        )
-    ]
+security_group = ibm.IsSecurityGroup(
+    "my-security-group", 
+    vpc=vpc.is_vpc_id,
 )
 
-# Export VPC details
+# Create Security Group Rules
+
+sg_rule_1 = ibm.IsSecurityGroupRule("my-sg-rule1",
+    group=security_group.is_security_group_id,
+    direction="inbound",
+    remote="127.0.0.1",
+    icmp={
+        "code": 20,
+        "type": 30,
+    })
+
+sg_rule_2 = ibm.IsSecurityGroupRule("my-sg-rule2",
+    group=security_group.is_security_group_id,
+    direction="inbound",
+    remote="127.0.0.1",
+    udp={
+        "port_min": 805,
+        "port_max": 807,
+    })
+
+sg_rule_3 = ibm.IsSecurityGroupRule("my-sg-rule3",
+    group=security_group.is_security_group_id,
+    direction="outbound",
+    remote="127.0.0.1",
+    tcp={
+        "port_min": 8080,
+        "port_max": 8080,
+    })
+
+# Output VPC details
 pulumi.export("vpc_id", vpc.id)
 pulumi.export("vpc_name", vpc.name)
-pulumi.export("subnet_id", subnet.id)
+pulumi.export("address_prefix", vpc_address_prefix.id)
+pulumi.export("subnet_id", vpc_subnet.id)
 pulumi.export("security_group_id", security_group.id)
 
 ```
 
 </details>
 
-
 <details>
-<summary> Example 3: IAM Service ID and API Key</summary>
-<br/>
-
-```py
-import pulumi
-import pulumi_ibm as ibm
-
-# Create a service ID
-service_id = ibm.iam.ServiceId(
-    "my-service-id",
-    name="my-app-service-id",
-    description="Service ID for my application"
-)
-
-# Create an API key for the service ID
-api_key = ibm.iam.ServiceApiKey(
-    "my-api-key",
-    name="my-app-api-key",
-    iam_service_id=service_id.iam_id,
-    description="API key for my application"
-)
-
-# Export the API key (be careful with this in production!)
-pulumi.export("api_key_value", api_key.apikey)
-```
-
-</details>
-
-<details>
-<summary> Example 4: Kubernetes Cluster with Node Pool </summary>
+<summary> Example 3: Red Hat OpenShift Cluster with a default worker pool with one worker node. </summary>
 <br/>
 
 ```py
@@ -374,34 +362,62 @@ import pulumi_ibm as ibm
 
 config = pulumi.Config()
 
-# Create a Kubernetes cluster
-cluster = ibm.container.VpcCluster(
-    "my-cluster",
-    name="my-k8s-cluster",
-    vpc_id=config.require("vpc_id"),
-    subnet_ids=config.require_object("subnet_ids"),
-    kube_version=config.get("kube_version") or "1.28",
-    flavor=config.get("flavor") or "bx2.4x16",
-    worker_count=config.get_int("worker_count") or 2,
-    resource_group_id=config.get("resource_group_id"),
-    tags=["environment:dev", "managed-by:pulumi"]
+# Create a VPC
+
+vpc = ibm.IsVpc(
+    "my-vpc",
+    name="gen2-vpc",
+    resource_group=config.get("resource-group"),
+    tags=["environment:dev"]
 )
 
-# Create a worker pool
-worker_pool = ibm.container.VpcWorkerPool(
-    "my-worker-pool",
-    cluster=cluster.id,
-    flavor=config.get("worker_pool_flavor") or "bx2.4x16",
-    worker_count=config.get_int("worker_pool_count") or 3,
-    name="additional-worker-pool",
-    vpc_id=config.require("vpc_id"),
-    subnet_ids=config.require_object("subnet_ids")
+# Create an address prefix
+vpc_address_prefix = ibm.IsVpcAddressPrefix(
+    "my-address-prefix",
+    cidr="10.0.1.0/24",
+    vpc=vpc.is_vpc_id,
+    zone="us-south-1"
 )
 
-# Export cluster details
-pulumi.export("cluster_id", cluster.id)
-pulumi.export("cluster_name", cluster.name)
-pulumi.export("kube_version", cluster.kube_version)
+# Create a subnet
+vpc_subnet = ibm.IsSubnet(
+    "my-subnet",
+    ipv4_cidr_block="10.0.1.0/24",
+    vpc=vpc.is_vpc_id,
+    zone="us-south-1",
+    opts = pulumi.ResourceOptions(
+        depends_on=[vpc_address_prefix]
+    )
+)
+
+# Create a COS instance
+cos_instance = ibm.ResourceInstance("cosInstance",
+    service="cloud-object-storage",
+    plan="standard",
+    location="global"
+)
+
+# Create an OCP Cluster
+cluster = ibm.ContainerVpcCluster("my-ocp-cluster",
+    vpc_id=vpc.is_vpc_id,
+    kube_version="4.18.24_openshift",
+    flavor="bx2.16x64",
+    worker_count=2,
+    entitlement="cloud_pak",
+    cos_instance_crn=cos_instance.resource_instance_id,
+    resource_group_id=config.get("resource-group"),
+    zones=[{
+        "subnet_id": vpc_subnet.id,
+        "name": "us-south-1",
+    }]
+)
+
+# Outputs
+pulumi.export("vpc_id", vpc.id)
+pulumi.export("vpc_name", vpc.name)
+pulumi.export("subnet_id", vpc_subnet.id)
+pulumi.export("ocp_cluster_id", cluster.id)
+
 ```
 
 </details>
