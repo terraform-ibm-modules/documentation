@@ -665,4 +665,3 @@ def get_resource_name(base_name: str) -> str:
 - [Pulumi IBM Cloud Provider](https://www.pulumi.com/registry/packages/ibm/)
 - [IBM Cloud Terraform Modules](https://github.com/terraform-ibm-modules)
 - [Pulumi Terraform Conversion Guide](https://www.pulumi.com/docs/using-pulumi/adopting-pulumi/migrating/terraform/)
-- [terraform-ibm-base-ocp-vpc Module](https://github.com/terraform-ibm-modules/terraform-ibm-base-ocp-vpc)
