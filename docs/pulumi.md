@@ -422,6 +422,50 @@ pulumi.export("ocp_cluster_id", cluster.id)
 
 </details>
 
+<details>
+<summary> Example 4: Use existing Terraform IBM Modules (TIM) to create Watson Discovery instance</summary>
+<br/>
+
+In order to use a Terraform module in Pulumi, first add it to your project using the `pulumi package add` command. Refer [here](https://www.pulumi.com/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/) for more information.
+
+```sh
+  pulumi package add terraform-module <module-source> [<version>] <pulumi-package-name>
+```
+
+This will generate a local SDK which can be imported in the Pulumi program.
+
+So, the Watson discovery package can be added as: 
+
+```sh
+pulumi package add terraform-module terraform-ibm-modules/watsonx-discovery/ibm v1.11.1 wx-discovery
+```
+
+```py
+import pulumi
+import pulumi_ibm as ibm
+import pulumi_wx_discovery as wxd_mod
+
+
+config = pulumi.Config()
+
+wxd = wxd_mod.Module(
+    "my-wxd-resource",
+    resource_group_id=config.get("resource-group"),
+    watson_discovery_name = "my-wxd",
+)
+
+# Show outputs
+pulumi.export("account_id", wxd.account_id)
+pulumi.export("wxd_id", wxd.id)
+pulumi.export("crn", wxd.crn)
+pulumi.export("plan_id", wxd.plan_id)
+pulumi.export("dashboard_url", wxd.dashboard_url)
+
+
+```
+
+</details>
+
 ## Best Practices
 
 **(a) Configuration Management with Dataclasses**
