@@ -269,6 +269,8 @@ pulumi.export("cos_instance_id", cos_instance.id)
 
 </details>
 
+<br/>
+
 <details>
 <summary> Example 2: VPC with Subnets and Security Groups </summary>
 <br/>
@@ -352,6 +354,8 @@ pulumi.export("security_group_id", security_group.id)
 
 </details>
 
+<br/>
+
 <details>
 <summary> Example 3: Red Hat OpenShift Cluster with a default worker pool with one worker node. </summary>
 <br/>
@@ -421,6 +425,8 @@ pulumi.export("ocp_cluster_id", cluster.id)
 ```
 
 </details>
+
+<br/>
 
 <details>
 <summary> Example 4: Use existing Terraform IBM Modules (TIM) to create Watson Discovery instance</summary>
