@@ -488,7 +488,6 @@ pulumi package add terraform-module terraform-ibm-modules/resource-group/ibm 1.2
 ```
 
 ```py
-"""A Python Pulumi program"""
 
 import pulumi
 import pulumi_ibm_rg_module as rgmod
