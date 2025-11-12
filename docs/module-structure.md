@@ -46,8 +46,6 @@ The following structure describes the [terraform-ibm-module-template](https://gi
 ├── README.md
 ├── ci -> symbolic link to common-dev-assets
 ├── commitlint.config.js
-├── cra-config.yaml
-├── cra-tf-validate-ignore-rules.json
 ├── module-metadata.json
 ├── main.tf
 ├── outputs.tf
