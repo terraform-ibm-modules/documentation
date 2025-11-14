@@ -7,6 +7,7 @@
     - [Porting an older module ](migrate-module.md)
     - [Validation tests](tests.md)
     - [GitHub Actions workflows](gh-actions.md)
+    - [Pulumi and IBMCloud](pulumi.md)
 - [Adding your module to IBM Cloud](onboard-ibm-cloud.md)
 - Maintaining the GitHub project
     - [Maintainers contribution process](maintain-module.md)
