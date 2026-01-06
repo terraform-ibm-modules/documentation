@@ -10,7 +10,9 @@
 - [Adding your module to IBM Cloud](onboard-ibm-cloud.md)
 - Maintaining the GitHub project
     - [Maintainers contribution process](maintain-module.md)
+    - [Code owners](codeowners.md)
     - [About merging pull requests](merging.md)
+    - [Renovate (Automated dependency updates)](renovate.md)
 - Reference
     - [Module authoring guidelines](implementation-guidelines.md)
     - [DA authoring guidelines](da-implementation-guidelines.md)
