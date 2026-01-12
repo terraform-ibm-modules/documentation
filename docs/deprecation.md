@@ -1,4 +1,4 @@
-# Deprecation process
+# Deprecation policy
 
 A module may become deprecated for a number of reasons. For example there might be a replacement module to migrate to, or perhaps one of the IBM Cloud services that the module provisions is end of life. Below lists the different phases of the deprecation process:
 
