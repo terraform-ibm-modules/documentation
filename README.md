@@ -31,6 +31,7 @@ You can see the published documentation at https://terraform-ibm-modules.github.
     - [Metadata file (index.yml)](https://terraform-ibm-modules.github.io/documentation/#/module-catalog-metadata.md)
     - [About module badges](https://terraform-ibm-modules.github.io/documentation/#/badge-status.md)
     - [Release versioning](https://terraform-ibm-modules.github.io/documentation/#/versioning.md)
+    - [Deprecation policy](https://terraform-ibm-modules.github.io/documentation/#/deprecation.md)
     - Governance
 - DA consumer tips
     - [Prefix](https://terraform-ibm-modules.github.io/documentation/#/prefix.md)

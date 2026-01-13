@@ -21,6 +21,7 @@
     - [Metadata file (index.yml)](module-catalog-metadata.md)
     - [About module badges](badge-status.md)
     - [Release versioning](versioning.md)
+    - [Deprecation policy](deprecation.md)
     - Governance
 - DA consumer tips
     - [Prefix](prefix.md)
