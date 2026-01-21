@@ -1,7 +1,6 @@
 ---
 
-# The YAML header is required. For more information about the YAML header, see
-# https://test.cloud.ibm.com/docs/writing?topic=writing-reference-architectures
+# The YAML header is required.
 
 copyright:
   years: 2023
@@ -22,7 +21,6 @@ version: 1.0
 
 # Use if the reference architecture has deployable code.
 # Value is the URL to land the user in the IBM Cloud catalog details page for the deployable architecture.
-# See https://test.cloud.ibm.com/docs/get-coding?topic=get-coding-deploy-button
 deployment-url: url
 
 docs: https://cloud.ibm.com/docs/solution-guide
@@ -69,8 +67,7 @@ The following line inserts all the attribute definitions. Don't delete.
 <!--
 Don't include "reference architecture" in the following title.
 Specify a title based on a use case. If the architecture has a module
-or tile in the IBM Cloud catalog, match the title to the catalog. See
-https://test.cloud.ibm.com/docs/solution-as-code?topic=solution-as-code-naming-guidance.
+or tile in the IBM Cloud catalog, match the title to the catalog.
 -->
 
 # Title
@@ -85,8 +82,6 @@ https://test.cloud.ibm.com/docs/solution-as-code?topic=solution-as-code-naming-g
 The IDs, such as {: #title-id} are required for publishing this reference architecture in IBM Cloud Docs. Set unique IDs for each heading. Also include
 the toc attributes on the H1, repeating the values from the YAML header.
  -->
-
-:information_source: **Tip:** For more information about this template, see [Creating reference architectures](https://test.cloud.ibm.com/docs/writing?topic=writing-reference-architectures).
 
 Include a short description, summary, or overview in a single paragraph that follows the title.
 
@@ -107,8 +102,6 @@ If you have a list or text to describe the diagram, include it here.
 Customize the design requirement heat map template image and highlight the scope of the architecture. Publishing in IBM Cloud Docs requires a caption to meet accessibility requirements.
 
 ![Enter image alt text here.](heatmap.svg "Title text that shows on hover here"){: caption="Figure 2. A description that prints on the page" caption-side="bottom"}
-
-For more information about creating a design requirements heat map image, see [Design requirements heat map](https://test.cloud.ibm.com/docs/architecture-framework?topic=architecture-framework-heat-map).
 
 
 ## Requirements
